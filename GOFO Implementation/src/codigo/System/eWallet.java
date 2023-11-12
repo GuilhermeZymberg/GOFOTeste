@@ -1,4 +1,4 @@
-package System;
+package codigo.System;
 
 import java.util.Scanner;
 import UI.SystemUI;
