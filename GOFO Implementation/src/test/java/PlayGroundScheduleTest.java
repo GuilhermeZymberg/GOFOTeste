@@ -1,5 +1,5 @@
-package codigo.System;
-import PlayGroundSchedule;
+package test.java;
+import codigo.System.PlayGroundSchedule;
 import org.junit.Test;
 import org.junit.Before;
 
