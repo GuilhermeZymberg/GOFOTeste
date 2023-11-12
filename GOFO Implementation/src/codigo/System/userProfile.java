@@ -1,4 +1,4 @@
-package codigo.System;
+package System;
 
 import System.eWallet;
 import java.util.Scanner;
