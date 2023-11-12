@@ -1,4 +1,4 @@
-package codigo.System;
+package System;
 
 import System.eWallet;
 import static System.Administrator.Approved;
