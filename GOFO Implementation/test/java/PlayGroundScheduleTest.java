@@ -1,3 +1,4 @@
+package PlayGroundScheduleTest;
 import src.System.PlayGroundSchedule;
 
 import org.junit.Test;
