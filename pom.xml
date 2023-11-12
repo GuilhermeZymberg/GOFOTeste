@@ -8,7 +8,7 @@
         <version>1.5.10.RELEASE</version>
     </parent>
     <groupId>src.codigo</groupId>
-    <artifactId>GOFOTeste</artifactId>
+    <artifactId>codigo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
