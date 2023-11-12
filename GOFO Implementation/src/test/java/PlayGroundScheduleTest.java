@@ -1,4 +1,4 @@
-package java;
+package codigo.src;
 import System.PlayGroundSchedule;
 
 import org.junit.Test;
