@@ -12,7 +12,7 @@ public class PlayGroundScheduleTest {
 
     @Before
     public void setUp() {
-        //setup de codigo;
+        playGroundSchedule = new PlayGroundSchedule();
     }
  
     @Test
