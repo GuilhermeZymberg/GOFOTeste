@@ -7,8 +7,8 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.10.RELEASE</version>
     </parent>
-    <groupId>src</groupId>
-    <artifactId>ProjetoFinal</artifactId>
+    <groupId>src.codigo</groupId>
+    <artifactId>GOFOTeste</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
