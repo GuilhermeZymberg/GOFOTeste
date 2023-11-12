@@ -1,4 +1,4 @@
-package codigo.UI;
+package UI;
 
 
 import System.Playground;
