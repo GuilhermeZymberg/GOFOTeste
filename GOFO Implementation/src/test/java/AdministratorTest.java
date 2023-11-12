@@ -1,5 +1,5 @@
 package java;
-import codigo.System.Administrator;
+import System.Administrator;
 
 import org.junit.Test;
 import org.junit.Before;
