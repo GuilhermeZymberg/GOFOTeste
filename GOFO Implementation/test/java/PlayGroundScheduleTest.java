@@ -1,5 +1,5 @@
-package PlayGroundScheduleTest;
-import src.System.PlayGroundSchedule;
+package java;
+import System.PlayGroundSchedule;
 
 import org.junit.Test;
 import org.junit.Before;
