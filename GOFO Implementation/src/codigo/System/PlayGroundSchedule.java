@@ -1,4 +1,4 @@
-package codigo.System;
+package System;
 
 import UI.SystemUI;
 import java.util.ArrayList;
