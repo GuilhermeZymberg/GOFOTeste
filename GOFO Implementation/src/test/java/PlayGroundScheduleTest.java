@@ -1,4 +1,4 @@
-package src.codigo.System;
+package codigo.System;
 
 import org.junit.Test;
 import org.junit.Before;
