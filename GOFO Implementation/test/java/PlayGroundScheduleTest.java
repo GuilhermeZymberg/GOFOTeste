@@ -1,4 +1,4 @@
-package System;
+import src.System.PlayGroundSchedule;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -6,7 +6,7 @@ import org.junit.Before;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class SystemTest {
+public class PlayGroundScheduleTest {
 
     private PlayGroundSchedule playGroundSchedule;
 
