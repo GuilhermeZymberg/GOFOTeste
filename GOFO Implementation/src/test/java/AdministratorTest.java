@@ -17,6 +17,6 @@ public class AdministratorTest{
   }
   @Test
   public void testGetPassword(){
-    assertEquals("123",getPassword());
+    assertEquals("123",administrator.getPassword());
   }
 }
