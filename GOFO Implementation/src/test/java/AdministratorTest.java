@@ -1,4 +1,5 @@
-package codigo.System;
+package java;
+import codigo.System.Administrator;
 
 import org.junit.Test;
 import org.junit.Before;
