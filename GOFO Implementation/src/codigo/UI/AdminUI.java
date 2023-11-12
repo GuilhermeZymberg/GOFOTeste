@@ -1,4 +1,4 @@
-package codigo.UI;
+package UI;
 
 import static UI.SystemUI.accountMenu;
 import static UI.SystemUI.admin;
