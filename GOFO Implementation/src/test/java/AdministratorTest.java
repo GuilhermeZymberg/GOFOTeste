@@ -1,5 +1,7 @@
 package codigo.src;
 import System.Administrator;
+import System.Playground;
+import java.io.BufferedWriter;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -14,6 +16,10 @@ public class AdministratorTest{
   @Before
   public void setUp(){
     administrator = new Administrator();
+    Playground abcd = new Playground();
+    abcd.setName("bolo");
+    abcd.setOwner("Jonas");
+    abcd.
   }
   @Test
   public void testGetPassword(){
@@ -21,6 +27,16 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    Playground abcd = new Playground();
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
+    bookByName("bolo","jose",2);
+    bw.write("teste");
+    bw.newLine();
+    bw.flush();
+    bw.write("12");
+    bw.newLine();
+    bw.flush();
+    bw.write("12");
+    bw.newLine();
+    bw.flush();
   }
 }
