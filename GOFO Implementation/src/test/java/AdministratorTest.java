@@ -44,8 +44,8 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
-    bookByName("bolo","jose",2);
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    administrator.bookByName("bolo","jose",2);
     bw.write("12"); //"time"
     bw.newLine();
     bw.flush();
