@@ -3,6 +3,7 @@ import System.Administrator;
 import System.Playground;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
+import java.io.IOException;
 import org.junit.Test;
 import org.junit.Before;
 
