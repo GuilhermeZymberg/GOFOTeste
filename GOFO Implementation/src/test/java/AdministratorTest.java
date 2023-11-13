@@ -15,11 +15,27 @@ public class AdministratorTest{
 
   @Before
   public void setUp(){
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
     administrator = new Administrator();
     Playground abcd = new Playground();
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
-    abcd.
+    abcd.setLocation();
+    bw.write("uber");
+    bw.newLine();
+    bw.flush();
+    abcd.setStatus();
+    bw.write("available");
+    bw.newLine();
+    bw.flush();
+    abcd.setCancellationPeriod(2);
+    abcd.setBooking();
+    bw.write("12");
+    bw.newLine();
+    bw.flush();
+    bw.write("14);
+    bw.newLine();
+    bw.flush();
   }
   @Test
   public void testGetPassword(){
