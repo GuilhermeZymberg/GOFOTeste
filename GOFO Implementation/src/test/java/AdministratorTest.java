@@ -33,7 +33,7 @@ public class AdministratorTest{
     bw.write("12");
     bw.newLine();
     bw.flush();
-    bw.write("14);
+    bw.write("14");
     bw.newLine();
     bw.flush();
   }
@@ -45,13 +45,13 @@ public class AdministratorTest{
   public void testBookByName(){
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
     bookByName("bolo","jose",2);
-    bw.write("teste");
+    bw.write("12"); //"time"
     bw.newLine();
     bw.flush();
-    bw.write("12");
+    bw.write("12"); //hours
     bw.newLine();
     bw.flush();
-    bw.write("12");
+    bw.write("12"); //days
     bw.newLine();
     bw.flush();
   }
