@@ -15,7 +15,10 @@ public class AdministratorTest{
 
   @Before
   public void setUp(){
+    ProcessBuilder builder = new ProcessBuilder(command);
+    final Process process = builder.start();
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
+    
     administrator = new Administrator();
     Playground abcd = new Playground();
     abcd.setName("bolo");
