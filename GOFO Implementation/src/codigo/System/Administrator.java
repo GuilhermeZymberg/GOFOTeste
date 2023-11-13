@@ -2,6 +2,8 @@ package System;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.InputStream;
+import java.io.PrintStream;
 import UI.SystemUI;
 
 /**
@@ -9,6 +11,22 @@ import UI.SystemUI;
  *
  * @author Mohamed_El_Laithy
  */
+public class IntegerAsker {
+    
+    private final Scanner scanner;
+    private final PrintStream out;
+    
+    public IntegerAsker(InputStream in, PrintStream out) {
+        scanner = new Scanner(in);
+        this.out = out;
+    }
+
+    public int ask(String message) {
+        out.println(message);
+        return scanner.nextInt();
+    }
+}
+
 public class Administrator {
 
     Scanner input = new Scanner(System.in);
@@ -32,7 +50,7 @@ public class Administrator {
         suspended = new ArrayList<Playground>();
         complaints = new ArrayList<String>();
     }
-
+    
     /**
      * Approved playgrounds displaying
      */
