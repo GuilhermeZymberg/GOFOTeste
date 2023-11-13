@@ -1,7 +1,7 @@
 package codigo.src;
 import System.Administrator;
 import System.Playground;
-import java.io.BufferedWriter;
+import java.io.*;
 
 import org.junit.Test;
 import org.junit.Before;
