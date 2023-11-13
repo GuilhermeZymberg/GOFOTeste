@@ -19,4 +19,8 @@ public class AdministratorTest{
   public void testGetPassword(){
     assertEquals("123",administrator.getPassword());
   }
+  @Test
+  public void testBookByName(){
+    Playground abcd = new Playground();
+  }
 }
