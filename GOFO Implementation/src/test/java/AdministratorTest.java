@@ -22,21 +22,26 @@ public class AdministratorTest{
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    bw.write("uber");
-    bw.newLine();
-    bw.flush();
-    abcd.setStatus();
-    bw.write("available");
-    bw.newLine();
-    bw.flush();
-    abcd.setCancellationPeriod(2);
-    abcd.setBooking();
-    bw.write("12");
-    bw.newLine();
-    bw.flush();
-    bw.write("14");
-    bw.newLine();
-    bw.flush();
+    try{
+      bw.write("uber");
+      bw.newLine();
+      bw.flush();
+      abcd.setStatus();
+      bw.write("available");
+      bw.newLine();
+      bw.flush();
+      abcd.setCancellationPeriod(2);
+      abcd.setBooking();
+      bw.write("12");
+      bw.newLine();
+      bw.flush();
+      bw.write("14");
+      bw.newLine();
+      bw.flush();
+    }
+    catch (IOException ioe) {
+         System.out.println(ioe);
+      }
   }
   @Test
   public void testGetPassword(){
@@ -46,14 +51,19 @@ public class AdministratorTest{
   public void testBookByName(){
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     administrator.bookByName("bolo","jose",2);
-    bw.write("12"); //"time"
-    bw.newLine();
-    bw.flush();
-    bw.write("12"); //hours
-    bw.newLine();
-    bw.flush();
-    bw.write("12"); //days
-    bw.newLine();
-    bw.flush();
+    try{
+      bw.write("12"); //"time"
+      bw.newLine();
+      bw.flush();
+      bw.write("12"); //hours
+      bw.newLine();
+      bw.flush();
+      bw.write("12"); //days
+      bw.newLine();
+      bw.flush();
+    }
+    catch (IOException ioe) {
+         System.out.println(ioe);
+      }
   }
 }
