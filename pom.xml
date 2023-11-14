@@ -36,10 +36,11 @@
     <dependencies>
         <!-- JUnit 4 for writing and running unit tests -->
         <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <version>4.12</version>
-         </dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
          
         <!-- Mockito for mocking objects in tests -->
         <dependency>
