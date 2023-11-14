@@ -27,11 +27,13 @@ public class AdministratorTest{
     String status = "available";
     String beggining = "12";
     String end = "14";
+    String price = "1";
     
     InputStream loc = new ByteArrayInputStream(location.getBytes());
     InputStream stat = new ByteArrayInputStream(status.getBytes());
     InputStream beg = new ByteArrayInputStream(beggining.getBytes());
     InputStream en = new ByteArrayInputStream(end.getBytes());
+    InputStream pr = new ByteArrayInputStream(price.getBytes());
     
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
@@ -44,6 +46,8 @@ public class AdministratorTest{
     System.setIn(beg);
     System.setIn(en);
     System.setIn(sysInBackup);
+    abcd.setPrice();
+    System.setIn(pr);
   }
   @Test
   public void testGetPassword(){
@@ -52,7 +56,7 @@ public class AdministratorTest{
   @Test
   public void testBookByName(){
     InputStream sysInBackup = System.in;
-    administrator.bookByName("bolo","jose",2);
+    int res = administrator.bookByName("bolo","jose",100);
     String tim = "12";
     String lon = "1";
     InputStream t = new ByteArrayInputStream(tim.getBytes());
@@ -62,5 +66,6 @@ public class AdministratorTest{
     System.setIn(l);
     System.setIn(t);
     System.setIn(sysInBackup);
+    assertEquals(1,res);
   }
 }
