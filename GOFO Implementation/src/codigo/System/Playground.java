@@ -107,6 +107,7 @@ public class Playground {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the playground Location:");
         locationGround = input.nextLine();
+        System.out.println(locationGround);
     }
     /**
      * set playground price
@@ -128,6 +129,7 @@ public class Playground {
         temp = input.nextLine();
         if (temp.equalsIgnoreCase("available") || temp.equalsIgnoreCase("not available")) {
             statusPlayground = temp;
+             System.out.println(statusPlayground);
         } else {
             System.out.println("invalid input please enter ( available or not available)");
             setStatus();
