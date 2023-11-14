@@ -15,11 +15,11 @@ import static org.junit.Assert.assertThrows;
 
 public class AdministratorTest{
   
-  Administrator test = Mockito.mock(Administrator.class);
+  Administrator test = mock(Administrator.class);
 
   @Before
   public void setUp(){
-    test.IntegerAsker asker = mock(test.IntegerAsker.class);
+    Administrator.IntegerAsker asker = mock(Administrator.IntegerAsker.class);
     administrator = new Administrator();
     Playground abcd = new Playground();
     abcd.setName("bolo");
@@ -44,7 +44,7 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    test.IntegerAsker asker = mock(test.IntegerAsker.class);
+    Administrator.IntegerAsker asker = mock(Administrator.IntegerAsker.class);
     administrator.bookByName("bolo","jose",2);
     try{
       when(asker.ask("Enter the time you want to book in")).thenReturn("12");
