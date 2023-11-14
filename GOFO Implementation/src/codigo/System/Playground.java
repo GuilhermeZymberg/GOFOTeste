@@ -21,6 +21,15 @@ public class Playground {
     public Playground() {
         object = new PlayGroundSchedule();
     }
+    public Playground(String name, String owner, String locationGround, int cancellationPeriod, int pricePerHour,String statusPlayground, PlayGroundSchedule object){
+        this.name = name;
+        this.owner = owner;
+        this.locationGround = locationGround;
+        this.cancellationPeriod = cancellationPeriod;
+        this.pricePerHour = pricePerHour;
+        this.statusPlayground = statusPlayground;
+        this.object = object;
+    }
     /**
      * set Cancellation Period function
      * @param time 
