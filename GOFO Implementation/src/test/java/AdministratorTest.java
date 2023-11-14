@@ -36,8 +36,9 @@ public class AdministratorTest{
     
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
-    abcd.setLocation();
     systemIn.provideLines("sp");
+    abcd.setLocation();
+    
     abcd.setStatus();
     systemIn.provideLines("available");
     abcd.setCancellationPeriod(2);
