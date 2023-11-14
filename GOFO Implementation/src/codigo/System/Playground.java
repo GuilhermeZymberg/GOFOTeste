@@ -16,7 +16,6 @@ public class Playground {
     int pricePerHour;
     String statusPlayground;
     PlayGroundSchedule object;
-    Scanner input = new Scanner(System.in);
     SystemUI obj = new SystemUI();
 
     public Playground() {
@@ -96,6 +95,7 @@ public class Playground {
      * set playground location
      */
     public void setLocation() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter the playground Location:");
         locationGround = input.nextLine();
     }
@@ -103,6 +103,7 @@ public class Playground {
      * set playground price
      */
     public void setPrice() {
+        Scanner input = new Scanner(System.in);
         String temp;
         System.out.println("Enter the playground price/hour:");
         temp = input.nextLine();
@@ -112,6 +113,7 @@ public class Playground {
      * set playground status as available or not available playground
      */
     public void setStatus() {
+        Scanner input = new Scanner(System.in);
         String temp;
         System.out.println("Enter the playground status:");
         temp = input.nextLine();
