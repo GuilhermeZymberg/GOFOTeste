@@ -3,6 +3,7 @@ import System.Administrator;
 import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.*;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class AdministratorTest{
   private Administrator administrator;
   
   @Rule
-  public final TextFromStandardInputStream systemIn = emptyStandardInputStream();
+  public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
   public void setUp(){
     //InputStream sysInBackup = System.in;
