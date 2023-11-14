@@ -4,7 +4,6 @@ import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
 import org.mockito.Mockito;
-import org.mockito.Mockito.*;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -25,13 +24,13 @@ public class AdministratorTest{
     abcd.setOwner("Jonas");
     abcd.setLocation();
     try{
-      when(asker.ask("Enter the playground Location:")).thenReturn("sp");
+      Mockito.when(asker.ask("Enter the playground Location:")).thenReturn("sp");
       abcd.setStatus();
-      when(asker.ask("Enter the playground status:")).thenReturn("available");
+      Mockito.when(asker.ask("Enter the playground status:")).thenReturn("available");
       abcd.setCancellationPeriod(2);
       abcd.setBooking();
-      when(asker.ask("Enter the beggining time of booking for your playground")).thenReturn("12");
-      when(asker.ask("Enter the end time of booking for your playground")).thenReturn("14");
+      Mockito.when(asker.ask("Enter the beggining time of booking for your playground")).thenReturn("12");
+      Mockito.when(asker.ask("Enter the end time of booking for your playground")).thenReturn("14");
     }
     catch (IOException ioe) {
          System.out.println(ioe);
