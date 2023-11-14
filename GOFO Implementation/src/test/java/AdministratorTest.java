@@ -3,6 +3,7 @@ import System.Administrator;
 import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
+import org.mockito.Mockito;
 import org.mockito.Mockito.*;
 import java.io.IOException;
 
@@ -14,7 +15,7 @@ import static org.junit.Assert.assertThrows;
 
 public class AdministratorTest{
   
-  Administrator test = mock(Administrator.class);
+  Administrator test = Mockito.mock(Administrator.class);
 
   @Before
   public void setUp(){
