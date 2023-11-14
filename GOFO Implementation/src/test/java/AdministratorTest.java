@@ -4,7 +4,6 @@ import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
 import org.mockito.Mockito;
-import org.mockito.Mockito.*;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -19,7 +18,7 @@ public class AdministratorTest{
 
   @Before
   public void setUp(){
-    Administrator.IntegerAsker asker = mock(Administrator.IntegerAsker.class);
+    Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
     administrator = new Administrator();
     Playground abcd = new Playground();
     abcd.setName("bolo");
@@ -44,7 +43,7 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    Administrator.IntegerAsker asker = mock(Administrator.IntegerAsker.class);
+    Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
     administrator.bookByName("bolo","jose",2);
     try{
       when(asker.ask("Enter the time you want to book in")).thenReturn("12");
