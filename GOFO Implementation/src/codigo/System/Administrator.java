@@ -11,24 +11,26 @@ import UI.SystemUI;
  *
  * @author Mohamed_El_Laithy
  */
-public static class IntegerAsker {
-    
-    private final Scanner scanner;
-    private final PrintStream out;
-    
-    public IntegerAsker(InputStream in, PrintStream out) {
-        scanner = new Scanner(in);
-        this.out = out;
-    }
 
-    public int ask(String message) {
-        out.println(message);
-        return scanner.nextInt();
-    }
-}
 
 public class Administrator {
+    
+    public static class IntegerAsker {
+    
+        private final Scanner scanner;
+        private final PrintStream out;
+    
+        public IntegerAsker(InputStream in, PrintStream out) {
+            scanner = new Scanner(in);
+            this.out = out;
+        }
 
+        public int ask(String message) {
+            out.println(message);
+            return scanner.nextInt();
+        }
+    }
+    
     Scanner input = new Scanner(System.in);
     String email, password;
     int choice;
