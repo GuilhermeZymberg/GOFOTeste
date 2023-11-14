@@ -37,23 +37,23 @@ public class AdministratorTest{
     System.setIn(in);
     
     input = "available";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     abcd.setStatus();
     System.setIn(in);
 
     
     abcd.setCancellationPeriod(2);
     input = "12";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     abcd.setBooking();
     System.setIn(in);
     
     input = "14";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
 
     input = "1";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     abcd.setPrice();
     System.setIn(in);
     
@@ -73,11 +73,11 @@ public class AdministratorTest{
     System.setIn(in);
     
     input = "1";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
 
     input = "12";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
     
     System.setIn(sysInBackup);
