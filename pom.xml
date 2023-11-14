@@ -27,6 +27,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <argLine>-Deditable.java.test.console=true</argLine>
                 </configuration>
             </plugin>
         </plugins>
