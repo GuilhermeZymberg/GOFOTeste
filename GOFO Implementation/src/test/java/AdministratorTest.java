@@ -23,31 +23,41 @@ public class AdministratorTest{
     administrator = new Administrator();
     
     Playground abcd = new Playground();
-    String location = "sp";
-    String status = "available";
-    String beggining = "12";
-    String end = "14";
-    String price = "1";
+    String input = "sp";
+    //String status = "available";
+    //String beggining = "12";
+    //String end = "14";
+    //String price = "1";
     
-    InputStream loc = new ByteArrayInputStream(location.getBytes());
-    InputStream stat = new ByteArrayInputStream(status.getBytes());
-    InputStream beg = new ByteArrayInputStream(beggining.getBytes());
-    InputStream en = new ByteArrayInputStream(end.getBytes());
-    InputStream pr = new ByteArrayInputStream(price.getBytes());
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    System.setIn(loc);
+    System.setIn(in);
+    
+    input = "available";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     abcd.setStatus();
     System.setIn(stat);
+
+    
     abcd.setCancellationPeriod(2);
+    input = "12";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     abcd.setBooking();
     System.setIn(beg);
+    
+    input = "14";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     System.setIn(en);
-    System.setIn(sysInBackup);
+
+    input = "1";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     abcd.setPrice();
     System.setIn(pr);
+    
+    System.setIn(sysInBackup);
   }
   @Test
   public void testGetPassword(){
@@ -57,14 +67,19 @@ public class AdministratorTest{
   public void testBookByName(){
     InputStream sysInBackup = System.in;
     int res = administrator.bookByName("bolo","jose",100);
-    String tim = "12";
-    String lon = "1";
-    InputStream t = new ByteArrayInputStream(tim.getBytes());
-    InputStream l = new ByteArrayInputStream(lon.getBytes());
+    String input = "12";
+    //String lon = "1";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
+    System.setIn(t);
     
-    System.setIn(t);
+    input = "1";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     System.setIn(l);
+
+    input = "12";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
     System.setIn(t);
+    
     System.setIn(sysInBackup);
     assertEquals(1,res);
   }
