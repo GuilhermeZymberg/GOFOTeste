@@ -27,7 +27,7 @@ public class Administrator {
 
         public int ask(String message) {
             out.println(message);
-            return scanner.nextInt();
+            return scanner.nextString();
         }
     }
     
