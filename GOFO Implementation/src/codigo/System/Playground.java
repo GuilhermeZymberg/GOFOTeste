@@ -177,4 +177,7 @@ public class Playground {
     public String getOwner() {
         return owner;
     }
+    public void setSchedule(PlayGroundSchedule object){
+        this.object = object;
+    }
 }
