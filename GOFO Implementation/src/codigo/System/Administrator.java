@@ -11,7 +11,7 @@ import UI.SystemUI;
  *
  * @author Mohamed_El_Laithy
  */
-public class IntegerAsker {
+public static class IntegerAsker {
     
     private final Scanner scanner;
     private final PrintStream out;
