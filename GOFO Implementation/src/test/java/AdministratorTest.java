@@ -38,30 +38,14 @@ public class AdministratorTest{
     abcd.setOwner("Jonas");
     abcd.setLocation();
     systemIn.provideLines("sp");
-    /*System.setIn(in);
-    
-    input = "available";
-    in = new ByteArrayInputStream(input.getBytes());*/
     abcd.setStatus();
-    //System.setIn(in);
-
-    
+    systemIn.provideLines("available");
     abcd.setCancellationPeriod(2);
-    /*input = "12";
-    in = new ByteArrayInputStream(input.getBytes());*/
     abcd.setBooking();
-    /*System.setIn(in);
-    
-    input = "14";
-    in = new ByteArrayInputStream(input.getBytes());
-    System.setIn(in);
-
-    input = "1";
-    in = new ByteArrayInputStream(input.getBytes());*/
+    systemIn.provideLines("12");
+    systemIn.provideLines("14");
     abcd.setPrice();
-    /*System.setIn(in);
-    
-    System.setIn(sysInBackup);*/
+    systemIn.provideLines("1");
   }
   @Test
   public void testGetPassword(){
@@ -71,20 +55,9 @@ public class AdministratorTest{
   public void testBookByName(){
     InputStream sysInBackup = System.in;
     int res = administrator.bookByName("bolo","jose",100);
-    /*String input = "12";
-    //String lon = "1";
-    InputStream in = new ByteArrayInputStream(input.getBytes());
-    System.setIn(in);
-    
-    input = "1";
-    in = new ByteArrayInputStream(input.getBytes());
-    System.setIn(in);
-
-    input = "12";
-    in = new ByteArrayInputStream(input.getBytes());
-    System.setIn(in);
-    
-    System.setIn(sysInBackup);*/
+    systemIn.provideLines("12");
+    systemIn.provideLines("1");
+    systemIn.provideLines("12");
     assertEquals(1,res);
   }
 }
