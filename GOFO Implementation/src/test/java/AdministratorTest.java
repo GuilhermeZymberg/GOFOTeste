@@ -27,18 +27,13 @@ public class AdministratorTest{
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    try{
-      Mockito.when(asker.ask("Enter the playground Location:")).thenReturn(loc);
-      abcd.setStatus();
-      Mockito.when(asker.ask("Enter the playground status:")).thenReturn(status);
-      abcd.setCancellationPeriod(2);
-      abcd.setBooking();
-      Mockito.when(asker.ask("Enter the beggining time of booking for your playground")).thenReturn(beg);
-      Mockito.when(asker.ask("Enter the end time of booking for your playground")).thenReturn(en);
-    }
-    catch (IOException ioe) {
-         System.out.println(ioe);
-      }
+    Mockito.when(asker.ask("Enter the playground Location:")).thenReturn(loc);
+    abcd.setStatus();
+    Mockito.when(asker.ask("Enter the playground status:")).thenReturn(status);
+    abcd.setCancellationPeriod(2);
+    abcd.setBooking();
+    Mockito.when(asker.ask("Enter the beggining time of booking for your playground")).thenReturn(beg);
+    Mockito.when(asker.ask("Enter the end time of booking for your playground")).thenReturn(en);
   }
   @Test
   public void testGetPassword(){
@@ -48,15 +43,10 @@ public class AdministratorTest{
   public void testBookByName(){
     Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
     test.bookByName("bolo","jose",2);
-    try{
-      String tim = "12";
-      String lon = "1";
-      Mockito.when(asker.ask("Enter the time you want to book in")).thenReturn(tim);
-      Mockito.when(asker.ask("How many hours Do you want to book")).thenReturn(lon);
-      Mockito.when(asker.ask("Enter the day you want to book in")).thenReturn(tim);
-    }
-    catch (IOException ioe) {
-         System.out.println(ioe);
-      }
+    String tim = "12";
+    String lon = "1";
+    Mockito.when(asker.ask("Enter the time you want to book in")).thenReturn(tim);
+    Mockito.when(asker.ask("How many hours Do you want to book")).thenReturn(lon);
+    Mockito.when(asker.ask("Enter the day you want to book in")).thenReturn(tim);
   }
 }
