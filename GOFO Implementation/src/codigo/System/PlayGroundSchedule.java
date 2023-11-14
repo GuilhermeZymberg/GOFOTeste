@@ -13,7 +13,7 @@ ArrayList<ArrayList<String>> schedule;
 int timeSlotPerHour;
 int begins;
 int ends;
-Scanner input = new Scanner(System.in);
+
 SystemUI obj = new SystemUI();
 
 public PlayGroundSchedule()
@@ -43,7 +43,8 @@ public void displayAllSlots()
  */
 public void setschedule()
 {
-	String temp;
+    Scanner input = new Scanner(System.in);
+    String temp;
     System.out.println("Enter the beggining time of booking for your playground");
     temp = input.nextLine();
     int getBegin = obj.stringToInt(temp);
@@ -73,7 +74,8 @@ public void setschedule()
  */
 public void setPrice()
 {
-	String temp;
+    Scanner input = new Scanner(System.in);
+    String temp;
     System.out.println("Enter the price per hour");
     temp = input.nextLine();
     timeSlotPerHour= obj.stringToInt(temp);
