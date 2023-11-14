@@ -26,6 +26,8 @@ public class AdministratorTest{
     administrator = new Administrator();
     
     Playground abcd = new Playground();
+    PlayGroundSchedule e = new PlayGroundSchedule();
+    abcd.setSchedule(e);
     //String input = "sp";
     //String status = "available";
     //String beggining = "12";
@@ -44,7 +46,7 @@ public class AdministratorTest{
     abcd.setCancellationPeriod(2);
     systemIn.provideLines("12");
     systemIn.provideLines("14");
-    abcd.setBooking();
+    e.setSchedule();
     systemIn.provideLines("1");
     abcd.setPrice();
     
