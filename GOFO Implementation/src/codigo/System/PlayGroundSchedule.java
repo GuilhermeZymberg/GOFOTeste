@@ -20,6 +20,12 @@ public PlayGroundSchedule()
 {
 	schedule = new ArrayList<ArrayList<String>>();
 }
+public PlayGroundSchedule(String SlotsStatus, int timeSlotPerHour, int begins, int ends){
+	this.SlotsStatus = SlotsStatus;
+	this.timeSlotPerHour = timeSlotPerHour;
+	this.begins = begins;
+	this.ends = ends;
+}
 /**
  * displaying all the booking slots
  */
