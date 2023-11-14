@@ -46,7 +46,7 @@ public class AdministratorTest{
     abcd.setCancellationPeriod(2);
     systemIn.provideLines("12");
     systemIn.provideLines("14");
-    e.setSchedule();
+    e.setschedule();
     systemIn.provideLines("1");
     abcd.setPrice();
     
