@@ -48,7 +48,9 @@ public class AdministratorTest{
     e.setschedule();
     systemIn.provideLines("1");
     abcd.setPrice();
-    
+    administrator.playgroundRequests(abcd);
+    systemIn.provideLines("yes");
+    administrator.approvePlayground();
   }
   @Test
   public void testGetPassword(){
