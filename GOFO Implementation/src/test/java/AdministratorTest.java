@@ -1,6 +1,5 @@
 package codigo.src;
 import System.Administrator;
-import System.IntegerAsker;
 import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
