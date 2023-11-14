@@ -249,6 +249,7 @@ public class Administrator {
      */
     public int bookByName(String playground, String player, int balance) {
         Scanner input = new Scanner(System.in);
+        System.out.println("yo");
         String temp;
         boolean inputChecker = true, bool = false;
         int playgroundSlot = 0, hoursBooked = 0, getAns = 0;
