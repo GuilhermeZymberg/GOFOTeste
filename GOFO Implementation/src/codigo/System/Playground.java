@@ -113,6 +113,7 @@ public class Playground {
      */
     public void setStatus() {
         String temp;
+        System.out.println("Enter the playground status:");
         temp = input.nextLine();
         if (temp.equalsIgnoreCase("available") || temp.equalsIgnoreCase("not available")) {
             statusPlayground = temp;
