@@ -38,15 +38,16 @@ public class AdministratorTest{
     abcd.setOwner("Jonas");
     systemIn.provideLines("sp");
     abcd.setLocation();
-    
-    abcd.setStatus();
     systemIn.provideLines("available");
+    abcd.setStatus();
+    
     abcd.setCancellationPeriod(2);
-    abcd.setBooking();
     systemIn.provideLines("12");
     systemIn.provideLines("14");
-    abcd.setPrice();
+    abcd.setBooking();
     systemIn.provideLines("1");
+    abcd.setPrice();
+    
   }
   @Test
   public void testGetPassword(){
@@ -55,10 +56,11 @@ public class AdministratorTest{
   @Test
   public void testBookByName(){
     InputStream sysInBackup = System.in;
-    int res = administrator.bookByName("bolo","jose",100);
     systemIn.provideLines("12");
     systemIn.provideLines("1");
     systemIn.provideLines("12");
+    int res = administrator.bookByName("bolo","jose",100);
+    
     assertEquals(1,res);
   }
 }
