@@ -15,7 +15,7 @@ import UI.SystemUI;
 
 public class Administrator {
     
-    public static class IntegerAsker {
+    /*public static class IntegerAsker {
     
         private final Scanner scanner;
         private final PrintStream out;
@@ -29,9 +29,9 @@ public class Administrator {
             out.println(message);
             return scanner.nextLine();
         }
-    }
+    }*/
     
-    Scanner input = new Scanner(System.in);
+    
     String email, password;
     int choice;
     String choice2;
@@ -80,6 +80,7 @@ public class Administrator {
      * Approving the requested playgrounds from the arraylist of requested
      */
     public void approvePlayground() {
+        Scanner input = new Scanner(System.in);
         for (int i = 0; i < Requested.size(); i++) {
             System.out.println("Owner: " + Requested.get(i).getOwner() + " Playground Name is: " + Requested.get(i).getName());
             System.out.println("Do you want to Approve this playground? (yes or no)");
@@ -188,6 +189,7 @@ public class Administrator {
      * @return arraylist
      */
     public int bookByLocation(String loc, String player, int balance) {
+        Scanner input = new Scanner(System.in);
         boolean bool = false, inputChecker = true;
         int playgroundSlot = 0;
         String temp;
@@ -246,6 +248,7 @@ public class Administrator {
      * @return arraylist
      */
     public int bookByName(String playground, String player, int balance) {
+        Scanner input = new Scanner(System.in);
         String temp;
         boolean inputChecker = true, bool = false;
         int playgroundSlot = 0, hoursBooked = 0, getAns = 0;
@@ -310,6 +313,7 @@ public class Administrator {
      * @param playground String playground name
      */
     public void suspendPlayground(String playground) {
+        Scanner input = new Scanner(System.in);
         boolean bool = true;
         for (int i = 0; i < Approved.size(); i++) {
             if (Approved.get(i).getName().equalsIgnoreCase(playground)) {
@@ -332,6 +336,7 @@ public class Administrator {
      * @param playground String playground name
      */
     public void deletePlayground(String playground) {
+        Scanner input = new Scanner(System.in);
         boolean bool = true;
         for (int i = 0; i < Approved.size(); i++) {
             if (Approved.get(i).getName().equalsIgnoreCase(playground)) {
@@ -369,6 +374,7 @@ public class Administrator {
      * removing the suspended playground from suspended list and moving it to approved list.
      */
     public void unSuspendPlayground() {
+        Scanner input = new Scanner(System.in);
         for (int i = 0; i < suspended.size(); i++) {
             System.out.println("Suspended playground name: " + suspended.get(i).getName());
             System.out.println("Do you want to unsuspend it?(yes or no)");
