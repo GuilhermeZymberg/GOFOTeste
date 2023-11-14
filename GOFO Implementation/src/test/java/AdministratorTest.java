@@ -27,7 +27,7 @@ public class AdministratorTest{
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    Mockito.when(asker.ask("Enter the playground Location:")).thenReturn(loc);
+    Mockito.when(asker.ask(anyString())).thenReturn(loc);
     abcd.setStatus();
     Mockito.when(asker.ask("Enter the playground status:")).thenReturn(status);
     abcd.setCancellationPeriod(2);
