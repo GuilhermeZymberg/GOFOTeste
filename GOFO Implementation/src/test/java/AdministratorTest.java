@@ -19,45 +19,45 @@ public class AdministratorTest{
 
   @Before
   public void setUp(){
-    InputStream sysInBackup = System.in;
+    //InputStream sysInBackup = System.in;
     administrator = new Administrator();
     
     Playground abcd = new Playground();
-    String input = "sp";
+    //String input = "sp";
     //String status = "available";
     //String beggining = "12";
     //String end = "14";
     //String price = "1";
     
-    InputStream in = new ByteArrayInputStream(input.getBytes());
+    //InputStream in = new ByteArrayInputStream(input.getBytes());
     
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    System.setIn(in);
+    /*System.setIn(in);
     
     input = "available";
-    in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());*/
     abcd.setStatus();
-    System.setIn(in);
+    //System.setIn(in);
 
     
     abcd.setCancellationPeriod(2);
-    input = "12";
-    in = new ByteArrayInputStream(input.getBytes());
+    /*input = "12";
+    in = new ByteArrayInputStream(input.getBytes());*/
     abcd.setBooking();
-    System.setIn(in);
+    /*System.setIn(in);
     
     input = "14";
     in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
 
     input = "1";
-    in = new ByteArrayInputStream(input.getBytes());
+    in = new ByteArrayInputStream(input.getBytes());*/
     abcd.setPrice();
-    System.setIn(in);
+    /*System.setIn(in);
     
-    System.setIn(sysInBackup);
+    System.setIn(sysInBackup);*/
   }
   @Test
   public void testGetPassword(){
@@ -67,7 +67,7 @@ public class AdministratorTest{
   public void testBookByName(){
     InputStream sysInBackup = System.in;
     int res = administrator.bookByName("bolo","jose",100);
-    String input = "12";
+    /*String input = "12";
     //String lon = "1";
     InputStream in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
@@ -80,7 +80,7 @@ public class AdministratorTest{
     in = new ByteArrayInputStream(input.getBytes());
     System.setIn(in);
     
-    System.setIn(sysInBackup);
+    System.setIn(sysInBackup);*/
     assertEquals(1,res);
   }
 }
