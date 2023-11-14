@@ -2,8 +2,7 @@ package codigo.src;
 import System.Administrator;
 import System.Playground;
 import System.PlayGroundSchedule;
-import java.io.InputStream;
-import java.io.ByteArrayInputStream;
+import java.io.*;
 
 import java.io.IOException;
 
@@ -16,7 +15,9 @@ import static org.junit.Assert.assertThrows;
 public class AdministratorTest{
   
   private Administrator administrator;
-
+  
+  @Rule
+  public final TextFromStandardInputStream systemIn = emptyStandardInputStream();
   @Before
   public void setUp(){
     //InputStream sysInBackup = System.in;
@@ -34,6 +35,7 @@ public class AdministratorTest{
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
+    systemIn.provideLines("sp");
     /*System.setIn(in);
     
     input = "available";
