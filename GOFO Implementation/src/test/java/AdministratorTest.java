@@ -3,7 +3,8 @@ import System.Administrator;
 import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
-import org.mockito.Mockito;
+import java.io.ByteArrayInputStream;
+import java.io.
 import java.io.IOException;
 
 import org.junit.Test;
@@ -14,39 +15,54 @@ import static org.junit.Assert.assertThrows;
 
 public class AdministratorTest{
   
-  Administrator test = Mockito.mock(Administrator.class);
+  private Administrator administrator;
 
   @Before
   public void setUp(){
-    Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
+    InputStream sysInBackup = System.in;
+    administrator = new Administrator();
+    InputOutput inputOutput= new InputOutput();
+    
     Playground abcd = new Playground();
-    String loc = "sp";
+    String location = "sp";
     String status = "available";
-    String beg = "12";
-    String en = "14";
+    String beggining = "12";
+    String end = "14";
+    
+    InputStream loc = new ByteArrayInputStream(location.getBytes());
+    InputStream stat = new ByteArrayInputStream(status.getBytes());
+    InputStream beg = new ByteArrayInputStream(beggining.getBytes());
+    InputStream en = new ByteArrayInputStream(end.getBytes());
+    
     abcd.setName("bolo");
     abcd.setOwner("Jonas");
     abcd.setLocation();
-    Mockito.when(asker.ask(Mockito.anyString())).thenReturn(loc);
+    System.setIn(loc);
     abcd.setStatus();
-    Mockito.when(asker.ask("Enter the playground status:")).thenReturn(status);
+    System.setIn(stat);
     abcd.setCancellationPeriod(2);
     abcd.setBooking();
-    Mockito.when(asker.ask("Enter the beggining time of booking for your playground")).thenReturn(beg);
-    Mockito.when(asker.ask("Enter the end time of booking for your playground")).thenReturn(en);
+    System.setIn(beg);
+    System.setIn(en);
+    System.setIn(sysInBackup);
   }
   @Test
   public void testGetPassword(){
-    assertEquals("123",test.getPassword());
+    assertEquals("123",administrator.getPassword());
   }
   @Test
   public void testBookByName(){
+    InputStream sysInBackup = System.in;
     Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
-    test.bookByName("bolo","jose",2);
+    administrator.bookByName("bolo","jose",2);
     String tim = "12";
     String lon = "1";
-    Mockito.when(asker.ask("Enter the time you want to book in")).thenReturn(tim);
-    Mockito.when(asker.ask("How many hours Do you want to book")).thenReturn(lon);
-    Mockito.when(asker.ask("Enter the day you want to book in")).thenReturn(tim);
+    InputStream t = new ByteArrayInputStream(tim.getBytes());
+    InputStream l = new ByteArrayInputStream(l.getBytes());
+    
+    System.setIn(i);
+    System.setIn(l);
+    System.setIn(t);
+    System.setIn(sysInBackup);
   }
 }
