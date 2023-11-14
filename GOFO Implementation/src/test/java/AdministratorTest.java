@@ -4,6 +4,7 @@ import System.Playground;
 import System.PlayGroundSchedule;
 import java.io.InputStream;
 import java.io.ByteArrayInputStream;
+
 import java.io.IOException;
 
 import org.junit.Test;
@@ -20,7 +21,6 @@ public class AdministratorTest{
   public void setUp(){
     InputStream sysInBackup = System.in;
     administrator = new Administrator();
-    InputOutput inputOutput= new InputOutput();
     
     Playground abcd = new Playground();
     String location = "sp";
@@ -52,14 +52,13 @@ public class AdministratorTest{
   @Test
   public void testBookByName(){
     InputStream sysInBackup = System.in;
-    Administrator.IntegerAsker asker = Mockito.mock(Administrator.IntegerAsker.class);
     administrator.bookByName("bolo","jose",2);
     String tim = "12";
     String lon = "1";
     InputStream t = new ByteArrayInputStream(tim.getBytes());
-    InputStream l = new ByteArrayInputStream(l.getBytes());
+    InputStream l = new ByteArrayInputStream(lon.getBytes());
     
-    System.setIn(i);
+    System.setIn(t);
     System.setIn(l);
     System.setIn(t);
     System.setIn(sysInBackup);
