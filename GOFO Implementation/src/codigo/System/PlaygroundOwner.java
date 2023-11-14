@@ -16,7 +16,6 @@ import java.util.ArrayList;
  */
 public class PlaygroundOwner extends userProfile {
 
-    Scanner input = new Scanner(System.in);
     ArrayList<Playground> listOfPlayground;
     eWallet eWallet;
     ArrayList<String> recieveMsg;
@@ -78,6 +77,7 @@ public class PlaygroundOwner extends userProfile {
      * @param playgroundName String playgroundName
      */
     public void updatePlaygroundName(String playgroundName) {
+        Scanner input = new Scanner(System.in);
         String newName, newStatus, newBeginning, newEnding;
         boolean found = false, bool = false;
         String temp;
@@ -136,6 +136,7 @@ public class PlaygroundOwner extends userProfile {
      * @param day String day
      */
     public void updatePlaygroundStatus(String playgroundName, String time, String day) {
+        Scanner input = new Scanner(System.in);
         boolean bool = false, inputChecker = true;
         while (inputChecker) {
             for (int i = 0; i < listOfPlayground.size(); i++) {
@@ -183,6 +184,7 @@ public class PlaygroundOwner extends userProfile {
      * @return
      */
     public int payMoney(String playground, int hours) {
+        Scanner input = new Scanner(System.in);
         int amount = 0;
         boolean bool = false;
         for (int i = 0; i < listOfPlayground.size(); i++) {
