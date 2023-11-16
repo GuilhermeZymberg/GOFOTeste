@@ -86,7 +86,6 @@ public class Administrator {
             System.out.println("Do you want to Approve this playground? (yes or no)");
             String getAns = input.nextLine();
             if (getAns.equalsIgnoreCase("yes")) {
-                System.out.println("yeeeeeeeeeeeeeeeeee");
                 Approved.add(Requested.get(i));
                 Requested.remove(Requested.get(i));
                 i--;
