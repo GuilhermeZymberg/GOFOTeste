@@ -57,7 +57,7 @@ public class AdministratorTest{
   @Test
   public void testBookByName(){
     InputStream sysInBackup = System.in;
-    systemIn.provideLines("12","1","12");
+    systemIn.provideLines("1","1","12");
     int res = administrator.bookByName("bolo","jose",100);
     
     assertEquals(1,res);
