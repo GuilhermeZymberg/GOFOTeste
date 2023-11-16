@@ -64,14 +64,14 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    systemIn.provideLines("1","1","12"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("12","1","12"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByName("Bão","jose",100); 
     
     assertEquals(1,res); //marcado com sucesso e preço é igual a um
   }
   @Test
   public void testBookByLocations(){
-    systemIn.provideLines("1","1","3"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("2","1","3"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByLocation("sbc","james",50); 
     assertEquals(50,res);
   }
