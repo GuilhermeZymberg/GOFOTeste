@@ -19,6 +19,6 @@ public class PlayGroundScheduleTest {
     @Test
     //teste para verificar a impressao com saldo suficiente
     public void testIndex() {
-        assertEquals(1, playGroundSchedule.getDayIndex("sunday"));
+        assertEquals(2, playGroundSchedule.getDayIndex("monday"));
     }
 }
