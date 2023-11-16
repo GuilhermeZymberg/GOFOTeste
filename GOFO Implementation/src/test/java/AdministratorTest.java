@@ -22,32 +22,40 @@ public class AdministratorTest{
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
   public void setUp(){
-    //InputStream sysInBackup = System.in;
     administrator = new Administrator();
     
-    Playground abcd = new Playground();
-    //String input = "sp";
-    //String status = "available";
-    //String beggining = "12";
-    //String end = "14";
-    //String price = "1";
-    
-    //InputStream in = new ByteArrayInputStream(input.getBytes());
-    
-    abcd.setName("bolo");
-    abcd.setOwner("Jonas");
+    Playground play1 = new Playground();
+    Playground play2 = new Playground();
+
+    //play1 setup 
+    play1.setName("Bão");
+    play1.setOwner("Jonas");
     systemIn.provideLines("sp");
-    abcd.setLocation();
+    play1.setLocation();
     systemIn.provideLines("available");
-    abcd.setStatus();
-    
-    abcd.setCancellationPeriod(2);
+    play1.setStatus();
+    play1.setCancellationPeriod(2);
     systemIn.provideLines("12", "14");
-    abcd.setBooking();
+    play1.setBooking();
     systemIn.provideLines("1");
-    abcd.setPrice();
-    administrator.playgroundRequests(abcd);
-    systemIn.provideLines("yes");
+    play1.setPrice();
+
+    //play2 setup 
+    play2.setName("Bad");
+    play2.setOwner("Pedro");
+    systemIn.provideLines("sbc");
+    play2.setLocation();
+    systemIn.provideLines("not available");
+    play2.setStatus();
+    play2.setCancellationPeriod(4);
+    systemIn.provideLines("1", "4");
+    play2.setBooking();
+    systemIn.provideLines("50");
+    play2.setPrice();
+    
+    administrator.playgroundRequests(play1);
+    administrator.playgroundRequests(play2);
+    systemIn.provideLines("yes","yes");
     administrator.approvePlayground();
   }
   @Test
@@ -56,10 +64,15 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    InputStream sysInBackup = System.in;
-    systemIn.provideLines("1","1","12");
-    int res = administrator.bookByName("bolo","jose",100);
+    systemIn.provideLines("1","1","12"); //hora: 1h, duração de 1h, no dia 12
+    int res = administrator.bookByName("bolo","jose",100); 
     
-    assertEquals(1,res);
+    assertEquals(1,res); //marcado com sucesso e preço é igual a um
+  }
+  @Test
+  public void testBookByLocations(){
+    systemIn.provideLines("1","1","3"); //hora: 1h, duração de 1h, no dia 12
+    int res = administrator.bookByLocation("sbc","james",50); 
+    assertequals(50,res);
   }
 }
