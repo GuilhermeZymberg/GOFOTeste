@@ -72,7 +72,7 @@ public class AdministratorTest{
   @Test
   public void testBookByLocations(){
     systemIn.provideLines("2","1","3"); //hora: 1h, duração de 1h, no dia 12
-    int res = administrator.bookByLocation("sbc","james",50); 
+    int res = administrator.bookByLocation("sbc","james",51); 
     assertEquals(50,res);
   }
 }
