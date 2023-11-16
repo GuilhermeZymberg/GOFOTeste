@@ -58,6 +58,7 @@ public void setschedule()
     for(int i=0; i<(getEnd-getBegin); i++)
     {
     	schedule.add(new ArrayList<String>());
+	System.out.println(Integer.toString((getBegin+i));
     	schedule.get(i).add(0,Integer.toString((getBegin+i)));
     	schedule.get(i).add(1,"sunday");
     	schedule.get(i).add(2,"monday");
