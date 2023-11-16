@@ -189,6 +189,7 @@ public int getDayIndex(String day) {
  */
 public void bookSlot(String player, String time,String day)
 {
+	System.out.println(schedule.size());
 	for(int i=0; i<schedule.size(); i++)
 	{
 		if(time.equalsIgnoreCase(schedule.get(i).get(0)))
