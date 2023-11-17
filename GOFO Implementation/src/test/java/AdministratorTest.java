@@ -64,7 +64,7 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByName(){
-    systemIn.provideLines("12","1","12"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("4","1","12"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByName("Bão","jose",100); 
     
     assertEquals(1,res); //marcado com sucesso e preço é igual a um
