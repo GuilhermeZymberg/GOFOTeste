@@ -38,11 +38,11 @@ public class PlayGroundScheduleTest {
 
     @Test
     public void Testbegin(){
-        assertEquals(1, getBegin());
+        assertEquals(1, playGroundSchedule.getBegin());
     }
 
     @Test
     public void TestEnd(){
-        assertEquals(3, getEnd());
+        assertEquals(3, playGroundSchedule.getEnd());
     }
 }
