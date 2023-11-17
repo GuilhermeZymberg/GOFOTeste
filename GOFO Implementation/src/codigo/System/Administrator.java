@@ -249,7 +249,6 @@ public class Administrator {
      */
     public int bookByName(String playground, String player, int balance) {
         Scanner input = new Scanner(System.in);
-        System.out.println("yo");
         String temp;
         boolean inputChecker = true, bool = false;
         int playgroundSlot = 0, hoursBooked = 0, getAns = 0;
@@ -282,7 +281,7 @@ public class Administrator {
         getAns = SystemUI.stringToInt(temp);
         System.out.println("Enter the day you want to book in");
         String getDay = input.nextLine();
-        System.out.println(getDay);
+        System.out.println("dia:"+getDay);
         //getDay = Application.isString(getDay);
 
         if (balance > (Approved.get(playgroundSlot).getPrice() * getAns)) {
