@@ -18,7 +18,7 @@ public class PlayGroundScheduleTest {
 
     @Before
     public void setUp() {
-        playGroundSchedule = new PlayGroundSchedule();
+        playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
 
         systemIn.provideLines("45");
         playGroundSchedule.setPrice();
@@ -33,6 +33,16 @@ public class PlayGroundScheduleTest {
 
     @Test
     public void TestSetPrice(){
-        assertEquals(45,playGroundSchedule.getTimeSlotPerHour());
+        assertEquals(45, playGroundSchedule.getTimeSlotPerHour());
+    }
+
+    @Test
+    public void Testbegin(){
+        assertEquals(1, getBegin());
+    }
+
+    @Test
+    public void TestEnd(){
+        assertEquals(3, getEnd());
     }
 }
