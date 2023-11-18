@@ -27,8 +27,26 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build and test with Maven
-      run: mvn -B package --file pom.xml
+    name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    - name: Build with Maven
+      run: mvn compile
+
+    # Add the test step here
+    - name: Test with Maven
+      run: mvn test
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
