@@ -44,7 +44,7 @@ public class AdministratorTest{
     //play2 setup 
     play2.setName("Bad");
     play2.setOwner("Pedro");
-
+    systemIn.provideLines("sbc");
     play2.setLocation();
     systemIn.provideLines("not available");
     play2.setStatus();
@@ -72,8 +72,9 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByLocations(){
-    systemIn.provideLines("2","1","monday"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("2","1"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByLocation("sbc","james",51); 
+    systemIn.provideLines("monday");
     assertEquals(50,res);
   }
 }
