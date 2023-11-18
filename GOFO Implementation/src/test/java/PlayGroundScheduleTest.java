@@ -16,7 +16,7 @@ public class PlayGroundScheduleTest {
 
     private PlayGroundSchedule playGroundSchedule;
     private PlaygroundOwner playGroundOwner;
-    private Playground playGround();
+    private Playground playGround;
 
     @Before
     public void setUp() {
