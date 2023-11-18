@@ -27,13 +27,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    name: Java CI with Maven
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    - name: Java CI with Maven
 
     - name: Build with Maven
       run: mvn compile
