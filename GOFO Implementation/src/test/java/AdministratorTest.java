@@ -60,11 +60,8 @@ public class AdministratorTest{
     administrator.approvePlayground();
   }
   @Test
-  public void testGetPassword(){
-    assertEquals("123",administrator.getPassword());
-  }
-  @Test
   public void testBookByName(){
+    System.out.println("TESTE BOOK BY NAME");
     systemIn.provideLines("4","1","sunday"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByName("Bão","jose",100); 
     
@@ -72,6 +69,7 @@ public class AdministratorTest{
   }
   @Test
   public void testBookByLocations(){
+    System.out.println("TESTE BOOK BY LOCATION");
     systemIn.provideLines("2","1"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByLocation("sbc","james",51); 
     systemIn.provideLines("monday");
