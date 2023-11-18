@@ -26,7 +26,8 @@ public class AdministratorTest{
     
     Playground play1 = new Playground();
     Playground play2 = new Playground();
-
+    
+    //UC02 - Playground Setup
     //play1 setup 
     play1.setName("Bão");
     play1.setOwner("Jonas");
@@ -43,7 +44,7 @@ public class AdministratorTest{
     //play2 setup 
     play2.setName("Bad");
     play2.setOwner("Pedro");
-    systemIn.provideLines("sbc");
+
     play2.setLocation();
     systemIn.provideLines("not available");
     play2.setStatus();
