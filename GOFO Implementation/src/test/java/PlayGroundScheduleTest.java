@@ -15,14 +15,27 @@ public class PlayGroundScheduleTest {
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
     private PlayGroundSchedule playGroundSchedule;
+    private PlaygroundOwner playGroundOwner;
+    private Playground playGround();
 
     @Before
     public void setUp() {
         playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
-
+        playGroundOwner = new PlaygroundOwner();
+        playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
+        playGroundOwner.addPlayground(playGround);
         systemIn.provideLines("45");
         playGroundSchedule.setPrice();
         
+    }
+    @Test
+    public void testPlayExist(){
+        assertEquals(true, playGroundOwner.existPlayground("Playground1"));
+    }
+    
+    @Test
+    public void testPlayNotExist(){
+        assertEquals(false, playGroundOwner.existPlayground("Playground14"));
     }
  
     @Test
