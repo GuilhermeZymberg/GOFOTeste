@@ -1,8 +1,6 @@
 package codigo.src;
 import System.userProfile;
 import UI.SystemUI;
-import static UI.SystemUI.thePlayers;
-import static UI.SystemUI.theOwners;
 import System.Player;
 import java.io.*;
 import java.util.ArrayList;
@@ -48,7 +46,7 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    assertEquals(p,s.gettThePlayers().get(0));
+    assertEquals(p,s.getThePlayers().get(0));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -64,7 +62,7 @@ public class UserRegistrationTest{
     p.setPhone(52);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
-    assertEquals(p,s.gettTheOwners().get(0));
+    assertEquals(p,s.getTheOwners().get(0));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
