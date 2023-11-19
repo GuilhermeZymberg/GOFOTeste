@@ -8,7 +8,6 @@ import static UI.SystemUI.isString;
 import static UI.SystemUI.stringToInt;
 import System.Player;
 import static UI.SystemUI.admin;
-import static UI.SystemUI.input;
 import static UI.SystemUI.theOwners;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -145,6 +144,7 @@ public class PlayerUI {
     
     //creates team of the player
     public static void createTeam(ArrayList<Player> thePlayers,String currentUser) {
+        Scanner input = new Scanner(System.in);
         System.out.println("Type the email of the player: ");
         boolean found = false;
         String getRequest = input.nextLine();
@@ -172,6 +172,7 @@ public class PlayerUI {
     //player requests playground owner to cancel booking of his booked slots
 
     public static void playerCancelBooking(String currentUser ) {
+        Scanner input = new Scanner(System.in);
         String playground, time, day, temp;
         int hours;
         System.out.println("Enter the name of the playground");
