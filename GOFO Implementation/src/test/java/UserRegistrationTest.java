@@ -15,7 +15,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 public class UserRegistrationTest{
-
+  private Player p;
+  private userProfile user;
+  private SystemUI s;
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
