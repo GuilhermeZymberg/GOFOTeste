@@ -29,6 +29,6 @@ public class UserRegistrationTest{
   @Test
   public void editPlayerInfoTest(){
     systemIn.provideLines("1","gui");
-    p.editPlayerInfo();
+    p.editPlayerinfo();
   }
 }
