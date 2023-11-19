@@ -3,6 +3,7 @@ import System.userProfile;
 import UI.SystemUI;
 import System.Player;
 import System.PlaygroundOwner;
+import System.eWallet;
 import java.io.*;
 import java.util.ArrayList;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
@@ -22,12 +23,14 @@ public class UserRegistrationTest{
   private SystemUI s;
   private Player p;
   private PlaygroundOwner pg;
+  private eWallet e;
   static ArrayList<Player> players = new ArrayList<Player>();
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
   public void setUp(){
+    e = new eWallet();
     p = new Player();
     pg =  new PlaygroundOwner();
     s = new SystemUI();
@@ -60,7 +63,8 @@ public class UserRegistrationTest{
     systemIn.provideLines("2","clara","r", "5","5678", "clahrck@gm.com","52", "rs","playground owner","50"); // invalid, fname, lname, ID, pass, email, phone, loc, balance
     s.register();
     systemIn.provideLines("50");
-    pg.setBalance();
+    e.setBalance();
+    pg.setBalance(e);
     pg.setFName("clara");
     pg.setLName("r");
     pg.setPassword("5678");
