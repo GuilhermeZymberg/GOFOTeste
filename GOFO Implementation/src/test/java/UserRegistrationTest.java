@@ -32,7 +32,7 @@ public class UserRegistrationTest{
     p.editPlayerinfo();
     systemIn.provideLines("2","ze");
     p.editPlayerinfo();
-    System.out.prinln(p.getFullName());
+    System.out.println(p.getFullName());
     assertEquals("gui ze", p.getFullName());
   }
 }
