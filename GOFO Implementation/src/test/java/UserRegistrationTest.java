@@ -53,9 +53,9 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    System.out.println(p.getFName());
-    System.out.println(s.getThePlayers().get(0).getFName());
-    System.out.println(p.getFName().equals(s.getThePlayers().get(0).getFName()));
+    System.out.println(p.getFullName());
+    System.out.println(s.getThePlayers().get(0).getFullName());
+    System.out.println(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
                        
     assertEquals(p,s.getThePlayers().get(0));
   }
