@@ -228,7 +228,7 @@ public class SystemUI {
             }
 
         }
-        getValidationCode();
+        //getValidationCode();
     }
 
     /**
