@@ -337,6 +337,12 @@ public class SystemUI {
         complaint += comp;
         admin.addComplaints(complaint);
     }
+    public Player getThePlayers(){
+        return thePlayers;
+    }
+    public PlaygroundOwner getTheOwners(){
+        return theOwners;
+    }
     /**
      * Main Function of System
      * @param args String[] args
