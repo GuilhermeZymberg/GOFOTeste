@@ -30,5 +30,9 @@ public class UserRegistrationTest{
   public void editPlayerInfoTest(){
     systemIn.provideLines("1","gui");
     p.editPlayerinfo();
+    systemIn.provideLines("2","ze");
+    p.editPlayerinfo();
+    System.out.prinln(p.getFullName());
+    assertEquals("gui ze", p.getFullName());
   }
 }
