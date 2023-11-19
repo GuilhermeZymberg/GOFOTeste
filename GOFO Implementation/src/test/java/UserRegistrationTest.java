@@ -14,6 +14,7 @@ import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertThat;
 
 public class UserRegistrationTest{
   private userProfile user1;
@@ -46,7 +47,7 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    assertEquals(p,s.getThePlayers().get(0));
+    assertThat(s.getThePlayers().get(0),samePropertyValuesAs(p));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -62,7 +63,7 @@ public class UserRegistrationTest{
     p.setPhone(52);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
-    assertEquals(p,s.getTheOwners().get(0));
+    assertThat(s.getThePlayers().get(0),samePropertyValuesAs(p));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
