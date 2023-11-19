@@ -2,7 +2,6 @@ package UI;
 
 import static UI.SystemUI.accountMenu;
 import static UI.SystemUI.admin;
-import static UI.SystemUI.input;
 import static UI.SystemUI.isString;
 
 /*
@@ -26,6 +25,7 @@ public class AdminUI {
      * 6- Logout
      */
     public static void adminMenu() {
+        Scanner input = new Scanner(System.in);
         String choice;
         String playground;
         System.out.println("Welcome to admin menu, please choose from the following");
