@@ -1,6 +1,8 @@
 package codigo.src;
 import System.userProfile;
 import UI.SystemUI;
+import static UI.SystemUI.thePlayers;
+import static UI.SystemUI.theOwners;
 import System.Player;
 import java.io.*;
 import java.util.ArrayList;
