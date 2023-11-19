@@ -16,37 +16,52 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 public class UserRegistrationTest{
-  private Player p;
-  private userProfile user;
+  private userProfile user1;
+  private userProfile user2;
   private SystemUI s;
   static ArrayList<Player> players = new ArrayList<Player>();
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
   public void setUp(){
-    p = new Player();
-    user = new userProfile();
+    s = new SystemUI();
+    user1 = new userProfile();
+    user2 = new userProfile();
   }
   @Test
-  public void editPlayerInfoTest(){
+  public void registerTest(){
     System.out.println("----REGISTRATION TEST----");
-    systemIn.provideLines("1","gui"); //fname
-    p.editPlayerinfo();
-    systemIn.provideLines("2","ze"); //lname
-    p.editPlayerinfo();
-    assertEquals("gui ze", p.getFullName());
-    systemIn.provideLines("3","7"); //ID
-    p.editPlayerinfo();
-    systemIn.provideLines("4","gui@gm.com"); //email
-    p.editPlayerinfo();
-    systemIn.provideLines("7","1234"); //password
-    p.editPlayerinfo();
-    systemIn.provideLines("5","(11) 99999-9999"); //phone
-    p.editPlayerinfo();
-    systemIn.provideLines("6","7"); //location
-    p.editPlayerinfo();
-    players.add(p);
-    p.obj.thePlayers.add(p);
-    assertEquals(players,p.obj.thePlayer);
+    System.out.println("--Main Flow--");
+    systemIn.provideLines("50","gui","z", "7","1234", "gui@gm.com","119999999999", "sp","player"); //balance, fname, lname, ID, pass, email, phone, loc
+    s.register();
+    p = new Player();
+    p.setBalance(50);
+    p.setFName("gui");
+    p.setLName("z");
+    p.setPassword("1234");
+    p.setID(7);
+    p.setRule("player");
+    p.setPhone(119999999999);
+    p.setEmail("gui@gm.com");
+    p.setLocation("sp");
+    assertEquals(p,s.thePlayers.get(0);
+  }
+  public void registerExceptionTest(){
+    System.out.println("----REGISTRATION TEST----");
+    System.out.println("--Exception Flow--");
+    systemIn.provideLines("50","2","clara","r", "5","5678", "clahrck@gm.com","229999999999", "rs","playground owner"); //balance, invalid, fname, lname, ID, pass, email, phone, loc
+    s.register();
+    p = new Player();
+    p.setBalance(50);
+    p.setFName("clara");
+    p.setLName("r");
+    p.setPassword("5678");
+    p.setID(5);
+    p.setRule("playground owner");
+    p.setPhone(119999999999);
+    p.setEmail("clahrck@gm.com");
+    p.setLocation("rs");
+    assertEquals(p,s.theOwners.get(0);
+    System.out.println("----END OF REGISTRATION TEST----");
   }
 }
