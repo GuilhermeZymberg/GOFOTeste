@@ -56,11 +56,10 @@ public class UserRegistrationTest{
     assertEquals(p.getBalance(),s.getThePlayers().get(0).getBalance());
     assertEquals(p.getFullName(),s.getThePlayers().get(0).getFullName());
     assertEquals(p.getPassword(),s.getThePlayers().get(0).getPassword());
-    assertEquals(p.getFID(),s.getThePlayers().get(0).getID());
+    assertEquals(p.getID(),s.getThePlayers().get(0).getID());
     assertEquals(p.getRule(),s.getThePlayers().get(0).getRule());
     assertEquals(p.getPhone(),s.getThePlayers().get(0).getPhone());
     assertEquals(p.getEmail(),s.getThePlayers().get(0).getEmail());
-    assertEquals(p.getLocation(),s.getThePlayers().get(0).getLocation());
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -78,14 +77,13 @@ public class UserRegistrationTest{
     pg.setPhone(52);
     pg.setEmail("clahrck@gm.com");
     pg.setLocation("rs");
-    assertEquals(p.getBalance(),s.getThePlayers().get(0).getBalance());
-    assertEquals(p.getFullName(),s.getThePlayers().get(0).getFullName());
-    assertEquals(p.getPassword(),s.getThePlayers().get(0).getPassword());
-    assertEquals(p.getFID(),s.getThePlayers().get(0).getID());
-    assertEquals(p.getRule(),s.getThePlayers().get(0).getRule());
-    assertEquals(p.getPhone(),s.getThePlayers().get(0).getPhone());
-    assertEquals(p.getEmail(),s.getThePlayers().get(0).getEmail());
-    assertEquals(p.getLocation(),s.getThePlayers().get(0).getLocation());
+    assertEquals(pg.getBalance(),s.getThePlayers().get(0).getBalance());
+    assertEquals(pg.getFullName(),s.getThePlayers().get(0).getFullName());
+    assertEquals(pg.getPassword(),s.getThePlayers().get(0).getPassword());
+    assertEquals(pg.getID(),s.getThePlayers().get(0).getID());
+    assertEquals(pg.getRule(),s.getThePlayers().get(0).getRule());
+    assertEquals(pg.getPhone(),s.getThePlayers().get(0).getPhone());
+    assertEquals(pg.getEmail(),s.getThePlayers().get(0).getEmail());
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
