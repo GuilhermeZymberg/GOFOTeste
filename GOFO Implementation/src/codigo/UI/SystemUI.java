@@ -337,10 +337,10 @@ public class SystemUI {
         complaint += comp;
         admin.addComplaints(complaint);
     }
-    public Player getThePlayers(){
+    public ArrayList<Player> getThePlayers(){
         return thePlayers;
     }
-    public PlaygroundOwner getTheOwners(){
+    public ArrayList<PlaygroundOwner> getTheOwners(){
         return theOwners;
     }
     /**
