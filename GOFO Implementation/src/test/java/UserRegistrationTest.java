@@ -77,13 +77,13 @@ public class UserRegistrationTest{
     pg.setPhone(52);
     pg.setEmail("clahrck@gm.com");
     pg.setLocation("rs");
-    assertEquals(pg.getBalance(),s.getThePlayers().get(0).getBalance());
-    assertEquals(pg.getFullName(),s.getThePlayers().get(0).getFullName());
-    assertEquals(pg.getPassword(),s.getThePlayers().get(0).getPassword());
-    assertEquals(pg.getID(),s.getThePlayers().get(0).getID());
-    assertEquals(pg.getRule(),s.getThePlayers().get(0).getRule());
-    assertEquals(pg.getPhone(),s.getThePlayers().get(0).getPhone());
-    assertEquals(pg.getEmail(),s.getThePlayers().get(0).getEmail());
+    assertEquals(pg.getMyBalance(),s.getTheOwners().get(0).getMyBalance());
+    assertEquals(pg.getFullName(),s.getTheOwners().get(0).getFullName());
+    assertEquals(pg.getPassword(),s.getTheOwners().get(0).getPassword());
+    assertEquals(pg.getID(),s.getTheOwners().get(0).getID());
+    assertEquals(pg.getRule(),s.getTheOwners().get(0).getRule());
+    assertEquals(pg.getPhone(),s.getTheOwners().get(0).getPhone());
+    assertEquals(pg.getEmail(),s.getTheOwners().get(0).getEmail());
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
