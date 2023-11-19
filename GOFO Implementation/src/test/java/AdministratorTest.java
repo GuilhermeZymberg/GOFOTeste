@@ -2,6 +2,7 @@ package codigo.src;
 import System.Administrator;
 import System.Playground;
 import System.PlayGroundSchedule;
+import System.Player;
 import java.io.*;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
@@ -23,10 +24,13 @@ public class AdministratorTest{
   @Before
   public void setUp(){
     administrator = new Administrator();
-    
+    Player p = new Player();
     Playground play1 = new Playground();
     Playground play2 = new Playground();
-    
+
+    //player setup
+
+    p.setBalance(1);
     //UC02 - Playground Setup
     //play1 setup 
     play1.setName("Bão");
@@ -71,9 +75,8 @@ public class AdministratorTest{
   @Test
   public void testBookByLocations(){
     System.out.println("----TESTE BOOK BY LOCATION----");
-    systemIn.provideLines("2","1"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("2","1","monday"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByLocation("sbc","james",51); 
-    systemIn.provideLines("monday");
     assertEquals(50,res);
     System.out.println("----FIM BOOK BY LOCATION----");
   }
