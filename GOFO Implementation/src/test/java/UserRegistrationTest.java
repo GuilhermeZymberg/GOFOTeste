@@ -53,14 +53,14 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp"); 
-    assertEquals(p.getBalance().equals(s.getThePlayers().get(0).getBalance()));
-    assertEquals(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
-    assertEquals(p.getPassword().equals(s.getThePlayers().get(0).getPassword()));
-    assertEquals(p.getFID().equals(s.getThePlayers().get(0).getID()));
-    assertEquals(p.getRule().equals(s.getThePlayers().get(0).getRule()));
-    assertEquals(p.getPhone().equals(s.getThePlayers().get(0).getPhone()));
-    assertEquals(p.getEmail().equals(s.getThePlayers().get(0).getEmail()));
-    assertEquals(p.getLocation().equals(s.getThePlayers().get(0).getLocation()));
+    assertEquals(p.getBalance(),s.getThePlayers().get(0).getBalance());
+    assertEquals(p.getFullName(),s.getThePlayers().get(0).getFullName());
+    assertEquals(p.getPassword(),s.getThePlayers().get(0).getPassword());
+    assertEquals(p.getFID(),s.getThePlayers().get(0).getID());
+    assertEquals(p.getRule(),s.getThePlayers().get(0).getRule());
+    assertEquals(p.getPhone(),s.getThePlayers().get(0).getPhone());
+    assertEquals(p.getEmail(),s.getThePlayers().get(0).getEmail());
+    assertEquals(p.getLocation(),s.getThePlayers().get(0).getLocation());
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -78,14 +78,14 @@ public class UserRegistrationTest{
     pg.setPhone(52);
     pg.setEmail("clahrck@gm.com");
     pg.setLocation("rs");
-    assertEquals(p.getBalance().equals(s.getThePlayers().get(0).getBalance()));
-    assertEquals(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
-    assertEquals(p.getPassword().equals(s.getThePlayers().get(0).getPassword()));
-    assertEquals(p.getFID().equals(s.getThePlayers().get(0).getID()));
-    assertEquals(p.getRule().equals(s.getThePlayers().get(0).getRule()));
-    assertEquals(p.getPhone().equals(s.getThePlayers().get(0).getPhone()));
-    assertEquals(p.getEmail().equals(s.getThePlayers().get(0).getEmail()));
-    assertEquals(p.getLocation().equals(s.getThePlayers().get(0).getLocation()));
+    assertEquals(p.getBalance(),s.getThePlayers().get(0).getBalance());
+    assertEquals(p.getFullName(),s.getThePlayers().get(0).getFullName());
+    assertEquals(p.getPassword(),s.getThePlayers().get(0).getPassword());
+    assertEquals(p.getFID(),s.getThePlayers().get(0).getID());
+    assertEquals(p.getRule(),s.getThePlayers().get(0).getRule());
+    assertEquals(p.getPhone(),s.getThePlayers().get(0).getPhone());
+    assertEquals(p.getEmail(),s.getThePlayers().get(0).getEmail());
+    assertEquals(p.getLocation(),s.getThePlayers().get(0).getLocation());
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
