@@ -52,12 +52,15 @@ public class UserRegistrationTest{
     p.setRule("player");
     p.setPhone(11);
     p.setEmail("gui@gm.com");
-    p.setLocation("sp");
-    System.out.println(p.getFullName());
-    System.out.println(s.getThePlayers().get(0).getFullName());
-    System.out.println(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
-                       
-    assertEquals(p,s.getThePlayers().get(0));
+    p.setLocation("sp"); 
+    assertEquals(p.getBalance().equals(s.getThePlayers().get(0).getBalance()));
+    assertEquals(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
+    assertEquals(p.getPassword().equals(s.getThePlayers().get(0).getPassword()));
+    assertEquals(p.getFID().equals(s.getThePlayers().get(0).getID()));
+    assertEquals(p.getRule().equals(s.getThePlayers().get(0).getRule()));
+    assertEquals(p.getPhone().equals(s.getThePlayers().get(0).getPhone()));
+    assertEquals(p.getEmail().equals(s.getThePlayers().get(0).getEmail()));
+    assertEquals(p.getLocation().equals(s.getThePlayers().get(0).getLocation()));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -75,7 +78,14 @@ public class UserRegistrationTest{
     pg.setPhone(52);
     pg.setEmail("clahrck@gm.com");
     pg.setLocation("rs");
-    assertEquals(p,s.getThePlayers().get(0));
+    assertEquals(p.getBalance().equals(s.getThePlayers().get(0).getBalance()));
+    assertEquals(p.getFullName().equals(s.getThePlayers().get(0).getFullName()));
+    assertEquals(p.getPassword().equals(s.getThePlayers().get(0).getPassword()));
+    assertEquals(p.getFID().equals(s.getThePlayers().get(0).getID()));
+    assertEquals(p.getRule().equals(s.getThePlayers().get(0).getRule()));
+    assertEquals(p.getPhone().equals(s.getThePlayers().get(0).getPhone()));
+    assertEquals(p.getEmail().equals(s.getThePlayers().get(0).getEmail()));
+    assertEquals(p.getLocation().equals(s.getThePlayers().get(0).getLocation()));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
