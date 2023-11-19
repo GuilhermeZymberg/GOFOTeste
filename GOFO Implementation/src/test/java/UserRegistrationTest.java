@@ -48,7 +48,7 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    assertEquals(p,s.thePlayers.get(0));
+    assertEquals(p,s.gettThePlayers().get(0));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -64,7 +64,7 @@ public class UserRegistrationTest{
     p.setPhone(52);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
-    assertEquals(p,s.theOwners.get(0));
+    assertEquals(p,s.gettTheOwners().get(0));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
