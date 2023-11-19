@@ -32,7 +32,7 @@ public class SystemUI {
      * @return phrase
      */
     public static String isString(String phrase) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         if (phrase != null && !phrase.equals("") && phrase.matches("^[a-zA-Z]*$")) {
             return phrase;
         } else {
@@ -48,7 +48,7 @@ public class SystemUI {
      * @return integer
      */
     public static int stringToInt(String phrase) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int integer = 0;
         if (phrase == null) {
             System.out.println("please enter value");
@@ -71,7 +71,7 @@ public class SystemUI {
      * @return phrase
      */
     public static String isDigit(String phrase) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int integer = 0;
         if (phrase == null) {
             System.out.println("Please enter value");
@@ -92,7 +92,7 @@ public class SystemUI {
      * Account Menu function it contain Login and Register and Exit From System
      */
     public static void accountMenu() {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Pick a choice");
         System.out.println("1-Log in");
         System.out.println("2-Register");
@@ -134,7 +134,7 @@ public class SystemUI {
      * get validation code for the email
      */
     public static void getValidationCode() {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter the validation code that was sent to your email.");
         String getCode = input.nextLine();
         System.out.println("Successfully verified!");
@@ -147,7 +147,7 @@ public class SystemUI {
      * @return email
      */
     public static String isEmail(String email) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         String emailReg = "^[a-zA-Z0-9_+&-]+(?:\\." + "[a-zA-Z0-9_+&-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z" + "A-Z]{2,7}$";
         Pattern emaill = Pattern.compile(emailReg);
         if (email == null || email.equals("")) {
@@ -168,7 +168,7 @@ public class SystemUI {
      * registering account for a user
      */
     public static void register() {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         String fName, lName, password, temp, email, role;
         int ID, phone;
         System.out.println("Enter the info to add new user");
@@ -235,7 +235,7 @@ public class SystemUI {
      * logging into the user's account
      */
     public static void Login() {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         String email;
         boolean correct = false;
         System.out.println("Log in");
@@ -283,7 +283,7 @@ public class SystemUI {
      * Complaining about something to the administrators
      */
     public static void complaintForm() {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         String personEmail, personType, complaint = null, comp;
         boolean bool = false, inputChecker = true;
         while (inputChecker) {
