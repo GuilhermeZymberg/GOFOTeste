@@ -117,7 +117,7 @@ public class SystemUI {
      * administrator
      */
     public static void Menu() {
-        
+        Scanner input = new Scanner(System.in);
         if (SystemUI.userType.equalsIgnoreCase("owner")) {
             playgroundOwnerUI.playgroundOwnerMenu(input, userIndex, theOwners, currentUser);
         } else if (SystemUI.userType.equalsIgnoreCase("player")) {
