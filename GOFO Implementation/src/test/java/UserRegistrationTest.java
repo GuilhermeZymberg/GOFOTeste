@@ -22,9 +22,9 @@ public class UserRegistrationTest{
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
   public void setUp(){
-    Player p = new Player();
-    userProfile user = new userProfile();
-    SystemUI s = new SystemUI();
+    p = new Player();
+    user = new userProfile();
+    s = new SystemUI();
   }
   @Test
   public void editPlayerInfoTest(){
