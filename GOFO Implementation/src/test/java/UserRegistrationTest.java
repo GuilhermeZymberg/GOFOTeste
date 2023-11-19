@@ -14,8 +14,6 @@ import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertThat;
-import static org.assertj.core.api.AbstractObjectAssert.isEqualToComparingFieldByField​;
 
 public class UserRegistrationTest{
   private userProfile user1;
@@ -48,7 +46,7 @@ public class UserRegistrationTest{
     p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    assertThat(s.getThePlayers().get(0),samePropertyValuesAs(p));
+    assertEquals(p,s.getThePlayers().get(0));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
@@ -64,7 +62,7 @@ public class UserRegistrationTest{
     p.setPhone(52);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
-    assertThat(s.getThePlayers().get(0),samePropertyValuesAs(p));
+    assertEquals(p,s.getThePlayers().get(0));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
