@@ -18,7 +18,6 @@ import System.PlaygroundOwner;
  * @author Mohamed_El_Laithy
  */
 public class SystemUI {
-    Scanner input = new Scanner(System.in);
     static String currentUser = "A";//Current logged in user
     static int userBalance = 0;//Current user balance
     static int userIndex = 0;//Current user Index
