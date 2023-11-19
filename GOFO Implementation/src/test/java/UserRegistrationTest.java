@@ -32,7 +32,7 @@ public class UserRegistrationTest{
   public void registerTest(){
     System.out.println("----REGISTRATION TEST----");
     System.out.println("--Main Flow--");
-    systemIn.provideLines("50","gui","z", "7","1234", "gui@gm.com","119999999999", "sp","player"); //balance, fname, lname, ID, pass, email, phone, loc
+    systemIn.provideLines("50","gui","z", "7","1234", "gui@gm.com","11", "sp","player"); //balance, fname, lname, ID, pass, email, phone, loc
     s.register();
     p = new Player();
     p.setBalance(50);
@@ -44,12 +44,12 @@ public class UserRegistrationTest{
     p.setPhone(119999999999);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
-    assertEquals(p,s.thePlayers.get(0);
+    assertEquals(p,s.thePlayers.get(0));
   }
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
     System.out.println("--Exception Flow--");
-    systemIn.provideLines("50","2","clara","r", "5","5678", "clahrck@gm.com","229999999999", "rs","playground owner"); //balance, invalid, fname, lname, ID, pass, email, phone, loc
+    systemIn.provideLines("50","2","clara","r", "5","5678", "clahrck@gm.com","52", "rs","playground owner"); //balance, invalid, fname, lname, ID, pass, email, phone, loc
     s.register();
     p = new Player();
     p.setBalance(50);
@@ -61,7 +61,7 @@ public class UserRegistrationTest{
     p.setPhone(119999999999);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
-    assertEquals(p,s.theOwners.get(0);
+    assertEquals(p,s.theOwners.get(0));
     System.out.println("----END OF REGISTRATION TEST----");
   }
 }
