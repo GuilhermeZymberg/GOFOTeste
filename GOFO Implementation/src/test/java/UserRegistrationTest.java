@@ -35,7 +35,7 @@ public class UserRegistrationTest{
   public void registerTest(){
     System.out.println("----REGISTRATION TEST----");
     System.out.println("--Main Flow--");
-    systemIn.provideLines("50","gui","z", "7","1234", "gui@gm.com","11", "sp","player"); //balance, fname, lname, ID, pass, email, phone, loc
+    systemIn.provideLines("gui","z", "7","1234", "gui@gm.com","11", "sp","player","50"); //balance, fname, lname, ID, pass, email, phone, loc, balance
     s.register();
     p.setBalance(50);
     p.setFName("gui");
@@ -51,7 +51,7 @@ public class UserRegistrationTest{
   public void registerExceptionTest(){
     System.out.println("----REGISTRATION TEST----");
     System.out.println("--Exception Flow--");
-    systemIn.provideLines("50","2","clara","r", "5","5678", "clahrck@gm.com","52", "rs","playground owner"); //balance, invalid, fname, lname, ID, pass, email, phone, loc
+    systemIn.provideLines("2","clara","r", "5","5678", "clahrck@gm.com","52", "rs","playground owner","50"); // invalid, fname, lname, ID, pass, email, phone, loc, balance
     s.register();
     p.setBalance(50);
     p.setFName("clara");
