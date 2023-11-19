@@ -41,7 +41,7 @@ public class UserRegistrationTest{
     p.setPassword("1234");
     p.setID(7);
     p.setRule("player");
-    p.setPhone(119999999999);
+    p.setPhone(11);
     p.setEmail("gui@gm.com");
     p.setLocation("sp");
     assertEquals(p,s.thePlayers.get(0));
@@ -58,7 +58,7 @@ public class UserRegistrationTest{
     p.setPassword("5678");
     p.setID(5);
     p.setRule("playground owner");
-    p.setPhone(119999999999);
+    p.setPhone(52);
     p.setEmail("clahrck@gm.com");
     p.setLocation("rs");
     assertEquals(p,s.theOwners.get(0));
