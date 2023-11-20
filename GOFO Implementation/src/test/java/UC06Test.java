@@ -26,9 +26,8 @@ public class UC06Test {
   @Before
   public void setUp() {
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
-    admin = new Administrator();
-    player = new PlayerUI();
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
+    admin = new Administrator();
   }
 
   @Test
