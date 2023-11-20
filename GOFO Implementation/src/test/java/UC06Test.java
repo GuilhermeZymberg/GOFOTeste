@@ -19,8 +19,6 @@ public class UC06Test {
   private Playground playGround;
   private Administrator admin;
   private PlayerUI player;
-
-  systemIn.provideLines("45");
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
