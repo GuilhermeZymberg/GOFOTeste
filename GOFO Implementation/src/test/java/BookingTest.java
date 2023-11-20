@@ -3,7 +3,7 @@ import System.Administrator;
 import System.Playground;
 import System.Player;
 import UI.PlayerUI;
-
+import java.util.ArrayList;
 import java.io.*;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
@@ -45,14 +45,48 @@ public class BookingTest{
     p.setBooking();
     systemIn.provideLines("1");
     p.setPrice();
-    administrator.playgroundRequests(play1);
+    administrator.playgroundRequests(p);
     systemIn.provideLines("yes");
     administrator.approvePlayground();
     
-    //p1 setup
+    
+    
+  }
+  @Test
+  public void bookTest(){
+    //p1 setup - user and balance
+    p1.setBalance();
+    p1.setFName("gege");
+    p1.setLName("akutami");
+    p1.setPassword("abcd");
+    p1.setID(10);
+    p1.setRule("player");
+    p1.setPhone(24);
+    p1.setEmail("gege@gml.com");
+    p1.setLocation("jj");
+    systemIn.provideLines("50");
+    
     //p2 setup
+    p2.setBalance();
+    p2.setFName("gege");
+    p2.setLName("akutami");
+    p2.setPassword("abcd");
+    p2.setID(10);
+    p2.setRule("player");
+    p2.setPhone(24);
+    p2.setEmail("gege@gml.com");
+    p2.setLocation("jj");
     //p3 setup
-    /* isso tudo no test incluindo os setup de cima ai
+    p3.setBalance();
+    p3.setFName("gege");
+    p3.setLName("akutami");
+    p3.setPassword("abcd");
+    p3.setID(10);
+    p3.setRule("player");
+    p3.setPhone(24);
+    p3.setEmail("gege@gml.com");
+    p3.setLocation("jj");
+
     p1.createTeam(p2);
     p1.createTeam(p3);
     ps.add(p1);
@@ -63,7 +97,6 @@ public class BookingTest{
     Scanner input = new Scanner(System.in);
     pu.Booking(input,p1.getID(),ps,p1.getEmail(),p1.getBalance());
     assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
-    */
     
   }
 }
