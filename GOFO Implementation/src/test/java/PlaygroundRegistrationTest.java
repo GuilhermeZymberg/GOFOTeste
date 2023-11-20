@@ -33,12 +33,12 @@ public class PlaygroundRegistrationTest{
   @Before
   public void setUp(){
     e1 = new eWallet();
-    e2 = new eWallet
+    e2 = new eWallet();
     pg1 =  new PlaygroundOwner();
     pg2 = new PlaygroundOwner();
     pu = new playgroundOwnerUI();
     user1 = new userProfile();
-    pgs = new ArrayList<PlaygroundOwner>()
+    pgs = new ArrayList<PlaygroundOwner>();
     p = new Playground();
   }
   @Test
@@ -57,10 +57,10 @@ public class PlaygroundRegistrationTest{
     p.setBooking();
     systemIn.provideLines("1");
     p.setPrice();
-    systemIn.provideLines("2");
     //pg1 setup - sem playground
-    e.setBalance();
-    pg1.setBalance(e);
+    systemIn.provideLines("50");
+    e1.setBalance();
+    pg1.setBalance(e1);
     pg1.setFName("jo");
     pg1.setLName("jo");
     pg1.setPassword("1234");
@@ -71,7 +71,9 @@ public class PlaygroundRegistrationTest{
     pg1.setLocation("sp");
 
     //pg2 setup - com playground
-    pg2.setBalance(e);
+    systemIn.provideLines("50");
+    e2.setBalance();
+    pg2.setBalance(e2);
     pg2.setFName("dio");
     pg2.setLName("dio");
     pg2.setPassword("5678");
