@@ -6,6 +6,7 @@ import System.PlaygroundOwner;
 import System.eWallet;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
@@ -19,14 +20,13 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
 
 public class PlaygroundRegistrationTest{
-  private userProfile user;
   private PlaygroundOwner pg1;
   private PlaygroundOwner pg2;
   private playgroundOwnerUI pu;
   private Playground p;
   private eWallet e1;
   private eWallet e2;
-  static ArrayList<PlayegroundOwner> pgs;
+  static ArrayList<PlaygroundOwner> pgs;
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
@@ -37,7 +37,6 @@ public class PlaygroundRegistrationTest{
     pg1 =  new PlaygroundOwner();
     pg2 = new PlaygroundOwner();
     pu = new playgroundOwnerUI();
-    user1 = new userProfile();
     pgs = new ArrayList<PlaygroundOwner>();
     p = new Playground();
   }
@@ -87,7 +86,7 @@ public class PlaygroundRegistrationTest{
 
     pgs.add(pg1);
     pgs.add(pg2);
-    System.provideLines("ceto barrero","gg","available","3","4","10");
+    systemIn.provideLines("ceto barrero","gg","available","3","4","10");
     Scanner input = new Scanner(System.in);
     pu.addPlayground(input,pgs,"jojo@gmml.com");
     assertTrue(pgs.get(0).existPlayground("ceto barrero"));
