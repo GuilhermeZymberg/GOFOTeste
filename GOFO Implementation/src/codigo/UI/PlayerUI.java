@@ -7,7 +7,7 @@ import static UI.SystemUI.isEmail;
 import static UI.SystemUI.isString;
 import static UI.SystemUI.stringToInt;
 import System.Player;
-import static UI.SystemUI.admin;
+import static System.Administrator;
 import static UI.SystemUI.theOwners;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -44,7 +44,7 @@ public class PlayerUI {
      * @param currentUser
      * @param userBalance 
      */
-    public static void playerMenu(Scanner input ,int userIndex, ArrayList<Player> thePlayers,String currentUser,int userBalance) {
+    public static void playerMenu(Scanner input , Administrator admin, int userIndex, ArrayList<Player> thePlayers,String currentUser,int userBalance) {
         int balance = 0, teamNum = 0;
         String choice, temp;
         System.out.println("Welcome to player menu, please choose from the following");
@@ -116,7 +116,7 @@ public class PlayerUI {
     }
     //Booking a slot for the player
 
-    public static void Booking(Scanner input ,int userIndex, ArrayList<Player> thePlayers,String currentUser,int userBalance) {
+    public static void Booking(Scanner input , Administrator admin, int userIndex, ArrayList<Player> thePlayers,String currentUser,int userBalance) {
         Player object = null;
         System.out.println("Do you want to look for a playground by:");
         System.out.println("1-Location");
