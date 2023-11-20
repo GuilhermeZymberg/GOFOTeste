@@ -86,7 +86,7 @@ public class PlaygroundRegistrationTest{
 
     pgs.add(pg1);
     pgs.add(pg2);
-    systemIn.provideLines("ceto barrero","gg","available","3","4","10");
+    systemIn.provideLines("ceto barrero","gg","3","available","4","10");
     Scanner input = new Scanner(System.in);
     pu.addPlayground(input,pgs,"jojo@gml.com");
     assertTrue(pgs.get(0).existPlayground("ceto barrero"));
