@@ -39,7 +39,7 @@ public class UserRegistrationTest{
   }
   @Test
   public void registerTest(){
-    System.out.println("----REGISTRATION TEST----");
+    System.out.println("----UC01 - REGISTRATION TEST----");
     System.out.println("--Main Flow--");
     systemIn.provideLines("gui","z", "7","1234", "gui@gm.com","11", "sp","player","50"); //balance, fname, lname, ID, pass, email, phone, loc, balance
     s.register();
@@ -62,7 +62,6 @@ public class UserRegistrationTest{
     assertEquals(p.getEmail(),s.getThePlayers().get(0).getEmail());
   }
   public void registerExceptionTest(){
-    System.out.println("----REGISTRATION TEST----");
     System.out.println("--Exception Flow--");
     systemIn.provideLines("2","clara","r", "5","5678", "clahrck@gm.com","52", "rs","playground owner","50"); // invalid, fname, lname, ID, pass, email, phone, loc, balance
     s.register();
@@ -84,6 +83,6 @@ public class UserRegistrationTest{
     assertEquals(pg.getRule(),s.getTheOwners().get(0).getRule());
     assertEquals(pg.getPhone(),s.getTheOwners().get(0).getPhone());
     assertEquals(pg.getEmail(),s.getTheOwners().get(0).getEmail());
-    System.out.println("----END OF REGISTRATION TEST----");
+    System.out.println("----UC01 - END OF REGISTRATION TEST----");
   }
 }
