@@ -31,7 +31,7 @@ public class UC06Test {
     systemIn.provideLines("Playgrounds1", "yes");
     admin.approvePlayground();
 
-    System.out.println("----UC64 - TEST----");
+    System.out.println("----UC06 - TEST----");
   }
 
   @Test
