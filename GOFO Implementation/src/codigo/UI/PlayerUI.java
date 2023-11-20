@@ -7,7 +7,7 @@ import static UI.SystemUI.isEmail;
 import static UI.SystemUI.isString;
 import static UI.SystemUI.stringToInt;
 import System.Player;
-import System.Administrator;
+import UI.SystemUI.admin;
 import static UI.SystemUI.theOwners;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
