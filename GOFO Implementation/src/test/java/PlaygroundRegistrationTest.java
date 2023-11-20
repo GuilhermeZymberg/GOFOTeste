@@ -1,0 +1,94 @@
+package codigo.src;
+import System.userProfile;
+import UI.playgroundOwnerUI;
+import System.Playground;
+import System.PlaygroundOwner;
+import System.eWallet;
+import java.io.*;
+import java.util.ArrayList;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+
+import java.io.IOException;
+
+import org.junit.Test;
+import org.junit.Before;
+import org.junit.Rule;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertThrows;
+
+public class PlaygroundRegistrationTest{
+  private userProfile user;
+  private PlaygroundOwner pg1;
+  private PlaygroundOwner pg2;
+  private playgroundOwnerUI pu;
+  private Playground p;
+  private eWallet e1;
+  private eWallet e2;
+  static ArrayList<PlayegroundOwner> pgs;
+  
+  @Rule
+  public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Before
+  public void setUp(){
+    e1 = new eWallet();
+    e2 = new eWallet
+    pg1 =  new PlaygroundOwner();
+    pg2 = new PlaygroundOwner();
+    pu = new playgroundOwnerUI();
+    user1 = new userProfile();
+    pgs = new ArrayList<PlaygroundOwner>()
+    p = new Playground();
+  }
+  @Test
+  public void addPlaygroundTest(){
+    System.out.println("----UC02 - PLAYGROUND REGISTRATION TEST----");
+    System.out.println("--Main Flow--");
+
+    //p setup 
+    p.setName("Bão");
+    systemIn.provideLines("sp");
+    p.setLocation();
+    systemIn.provideLines("available");
+    p.setStatus();
+    p.setCancellationPeriod(2);
+    systemIn.provideLines("1", "4");
+    p.setBooking();
+    systemIn.provideLines("1");
+    p.setPrice();
+    systemIn.provideLines("2");
+    //pg1 setup - sem playground
+    e.setBalance();
+    pg1.setBalance(e);
+    pg1.setFName("jo");
+    pg1.setLName("jo");
+    pg1.setPassword("1234");
+    pg1.setID(2);
+    pg1.setRule("playground owner");
+    pg1.setPhone(42);
+    pg1.setEmail("jojo@gml.com");
+    pg1.setLocation("sp");
+
+    //pg2 setup - com playground
+    pg2.setBalance(e);
+    pg2.setFName("dio");
+    pg2.setLName("dio");
+    pg2.setPassword("5678");
+    pg2.setID(1);
+    pg2.setRule("playground owner");
+    pg2.setPhone(33);
+    pg2.setEmail("dio@gml.com");
+    pg2.setLocation("eg");
+    p.setOwner(pg2.getEmail());
+    pg2.addPlayground(p);
+
+    pgs.add(pg1);
+    pgs.add(pg2);
+    System.provideLines("ceto barrero","gg","available","3","4","10");
+    Scanner input = new Scanner(System.in);
+    pu.addPlayground(input,pgs,"jojo@gmml.com");
+    assertTrue(pgs.get(0).existPlayground("ceto barrero"));
+  }
+  
+}
