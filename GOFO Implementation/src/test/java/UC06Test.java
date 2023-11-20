@@ -28,7 +28,8 @@ public class UC06Test {
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
     admin = new Administrator();
-    systemIn.provideLines("Playgrounds1", "yes");
+    admin.playgroundRequests(playGround);
+    systemIn.provideLines("Playground1", "yes");
     admin.approvePlayground();
 
     System.out.println("----UC06 - TEST----");
