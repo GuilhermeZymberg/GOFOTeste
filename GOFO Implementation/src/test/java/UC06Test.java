@@ -1,7 +1,7 @@
 package codigo.src;
+import System.PlayGroundSchedule;
 import System.Administrator;
 import System.Playground;
-import UI.PlayerUI;
 import java.io.*;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
@@ -16,15 +16,16 @@ import static org.junit.Assert.assertThrows;
 
 public class UC06Test {
 
+  private PlayGroundSchedule playGroundSchedule;
   private Playground playGround;
   private Administrator admin;
-  private PlayerUI player;
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
   @Before
   public void setUp() {
+    playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     admin = new Administrator();
     player = new PlayerUI();
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
