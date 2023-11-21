@@ -31,6 +31,9 @@ public class BookingTest{
     p = new Playground();
     administrator = new Administrator();
     ps = new ArrayList<Player>();
+    p1 = new Player();
+    p2 = new Player();
+    p3 = new Player();
     System.out.println("----UC04 - BOOKING TEST----");
     System.out.println("--Main Flow--");
     //playground setup
@@ -49,12 +52,8 @@ public class BookingTest{
     systemIn.provideLines("yes");
     administrator.approvePlayground();
     
-    
-    
-  }
-  @Test
-  public void bookTest(){
     //p1 setup - user and balance
+    systemIn.provideLines("50");
     p1.setBalance();
     p1.setFName("gege");
     p1.setLName("akutami");
@@ -92,13 +91,18 @@ public class BookingTest{
     ps.add(p1);
     ps.add(p2);
     ps.add(p3);
+    
+  }
+  @Test
+  public void bookTest(){
+    
     int beforeBal = p1.getBalance();
     systemIn.provideLines("3","1","sunday");
     administrator.bookByName("Teste",p1.getFullName(),p1.getBalance());
     assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
     for(int i = 1; i < ps.size(); i++){
       ps.get(i).addInbox("Invited for"+ p.getName() + "from 3 to 4 PM at sunday");
-      ps.get(i).viewInbox(); //
+      ps.get(i).viewInbox(); //verificar se impressão foi que estava vazia ou não
     }
     
   }
