@@ -96,7 +96,7 @@ public class BookingTest{
     systemIn.provideLines("3","1","sunday");
     administrator.bookByName("Teste",p1.getFullName(),p1.getBalance());
     assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
-    for(int i = 1; i < ps.size(); i++{
+    for(int i = 1; i < ps.size(); i++){
       ps.get(i).addInbox("Invited for"+ p1.getName() + "from 3 to 4 PM at sunday");
       System.out.println(ps.get(i).Inbox.get(0));
     }
