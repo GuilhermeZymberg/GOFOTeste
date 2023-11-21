@@ -127,7 +127,7 @@ public class BookingTest{
       ps.get(i).addInbox("Invited for "+ p.getName() + " from 3 to 5 PM at sunday");
       systemOutRule.clearLog();
       ps.get(i).viewInbox(); //verificar se impressão foi que estava vazia ou não
-      assertEquals("Message No.1: Invited for "+ p.getName() + " from 3 to 5 PM at sunday", systemOutRule.getLog());
+      assertEquals("Message No.1: Invited for "+ p.getName() + " from 3 to 5 PM at sunday\n", systemOutRule.getLog());
     }
     
   }
