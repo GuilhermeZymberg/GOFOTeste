@@ -85,6 +85,7 @@ public class Administrator {
             System.out.println("Owner: " + Requested.get(i).getOwner() + " Playground Name is: " + Requested.get(i).getName());
             System.out.println("Do you want to Approve this playground? (yes or no)");
             String getAns = input.nextLine();
+            System.out.println(getAns + "=============================================");
             if (getAns.equalsIgnoreCase("yes")) {
                 Approved.add(Requested.get(i));
                 Requested.remove(Requested.get(i));
@@ -359,7 +360,6 @@ public class Administrator {
      * @param x playground object
      */
     public void playgroundRequests(Playground x) {
-        System.out.println(x);
         Requested.add(x);
     }
     /**
