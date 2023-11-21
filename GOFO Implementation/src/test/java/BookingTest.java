@@ -144,7 +144,7 @@ public class BookingTest{
     System.out.println("----UC03 - CANCEL BOOKING TEST----");
     System.out.println("--Main Flow--");
     p1.CancelBooking("Teste","3");
-    for(i = 3; i < 5; i++){
+    for(int i = 3; i < 5; i++){
       p.cancelBooking("sunday",Integer.toString(i));
     }
     p.setStatus("available");
