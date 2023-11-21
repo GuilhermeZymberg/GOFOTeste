@@ -28,6 +28,8 @@ public class BookingTest{
   private Playground p;
   private PlayerUI pu;
   private ArrayList<Player> ps;
+  private PlaygroundOwner po;
+  private eWallet e;
   @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Rule
