@@ -46,7 +46,7 @@ public class BookingTest{
     p.setCancellationPeriod(2);
     systemIn.provideLines("1", "4");
     p.setBooking();
-    systemIn.provideLines("1");
+    systemIn.provideLines("5");
     p.setPrice();
     administrator.playgroundRequests(p);
     systemIn.provideLines("yes");
@@ -99,11 +99,10 @@ public class BookingTest{
   public void bookTest(){
     
     int beforeBal = p1.getBalance();
-    systemIn.provideLines("3","1","sunday");
-    administrator.bookByName("Teste",p1.getFullName(),p1.getBalance());
-    assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
+    systemIn.provideLines("3","2","sunday");
+    assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance());); //teste booking
     for(int i = 1; i < ps.size(); i++){
-      ps.get(i).addInbox("Invited for"+ p.getName() + "from 3 to 4 PM at sunday");
+      ps.get(i).addInbox("Invited for"+ p.getName() + "from 3 to 5 PM at sunday");
       ps.get(i).viewInbox(); //verificar se impressão foi que estava vazia ou não
     }
     
