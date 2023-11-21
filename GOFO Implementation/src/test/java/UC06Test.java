@@ -3,6 +3,7 @@ import System.PlayGroundSchedule;
 import System.Administrator;
 import System.Playground;
 import java.io.*;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class UC06Test {
   private Administrator admin;
   
   @Rule
+  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
   @Before
