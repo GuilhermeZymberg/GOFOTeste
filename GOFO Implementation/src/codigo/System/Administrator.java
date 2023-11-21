@@ -281,7 +281,6 @@ public class Administrator {
         getAns = SystemUI.stringToInt(temp);
         System.out.println("Enter the day you want to book in");
         String getDay = input.nextLine();
-        System.out.println("dia:"+getDay);
         //getDay = Application.isString(getDay);
 
         if (balance > (Approved.get(playgroundSlot).getPrice() * getAns)) {
