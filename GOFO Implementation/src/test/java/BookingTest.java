@@ -66,6 +66,7 @@ public class BookingTest{
     systemIn.provideLines("50");
     
     //p2 setup
+    systemIn.provideLines("50");
     p2.setBalance();
     p2.setFName("gege");
     p2.setLName("akutami");
@@ -76,6 +77,7 @@ public class BookingTest{
     p2.setEmail("gege@gml.com");
     p2.setLocation("jj");
     //p3 setup
+    systemIn.provideLines("50");
     p3.setBalance();
     p3.setFName("gege");
     p3.setLName("akutami");
