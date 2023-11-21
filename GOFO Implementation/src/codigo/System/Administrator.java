@@ -85,7 +85,6 @@ public class Administrator {
             System.out.println("Owner: " + Requested.get(i).getOwner() + " Playground Name is: " + Requested.get(i).getName());
             System.out.println("Do you want to Approve this playground? (yes or no)");
             String getAns = input.nextLine();
-            System.out.println(getAns + "=============================================");
             if (getAns.equalsIgnoreCase("yes")) {
                 Approved.add(Requested.get(i));
                 Requested.remove(Requested.get(i));
@@ -118,7 +117,6 @@ public class Administrator {
         }
         boolean x = false;
         for (int i = 0; i < Approved.size(); i++) {
-            System.out.println(Approved.get(i).getName() + "==========================================");
             if(Approved.get(i).getName().equals(Name)){
                 System.out.println("PlayGround Number :" + (i+1));
                 System.out.println("PlayGround Status :" + Approved.get(i).getStatus());
