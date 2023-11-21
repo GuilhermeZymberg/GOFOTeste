@@ -116,7 +116,6 @@ public class Administrator {
             System.out.println("Playground Number "+(i+1) + " Name : " + Approved.get(i).getName() + " ");
         }
         boolean x = false;
-        System.out.println(Approved.size() + "==========================================");
         for (int i = 0; i < Approved.size(); i++) {
             System.out.println(Approved.get(i).getName() + "==========================================");
             if(Approved.get(i).getName().equals(Name)){
@@ -360,6 +359,7 @@ public class Administrator {
      * @param x playground object
      */
     public void playgroundRequests(Playground x) {
+        System.out.println(x);
         Requested.add(x);
     }
     /**
