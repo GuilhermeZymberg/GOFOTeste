@@ -30,6 +30,7 @@ public class BookingTest{
   private ArrayList<Player> ps;
   private PlaygroundOwner po;
   private eWallet e;
+  private String free;
   @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Rule
@@ -120,6 +121,10 @@ public class BookingTest{
   }
   @Test
   public void bookTest(){
+    //setup for cancelbooking assertion
+    systemOutRule.clearLog();
+    p.freeSlots();
+    free = systemOutRule.getLog();
     int beforeBal = p1.getBalance();
     systemIn.provideLines("3","2","sunday");
     assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //teste booking
@@ -150,6 +155,6 @@ public class BookingTest{
     }
     systemIn.provideLines("available");
     p.setStatus();
-    p.freeSlots();
+    assertEquals(free,p.freeSlots());
   }
 }
