@@ -155,6 +155,8 @@ public class BookingTest{
     }
     systemIn.provideLines("available");
     p.setStatus();
-    assertEquals(free,p.freeSlots());
+    systemOutRule.clearLog();
+    p.freeSlots();
+    assertEquals(free,systemOutRule.getLog());
   }
 }
