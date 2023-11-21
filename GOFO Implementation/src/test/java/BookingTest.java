@@ -98,7 +98,7 @@ public class BookingTest{
     assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
     for(int i = 1; i < ps.size(); i++){
       ps.get(i).addInbox("Invited for"+ p.getName() + "from 3 to 4 PM at sunday");
-      System.out.println(ps.get(i).Inbox.get(0));
+      ps.get(i).viewInbox(); //
     }
     
   }
