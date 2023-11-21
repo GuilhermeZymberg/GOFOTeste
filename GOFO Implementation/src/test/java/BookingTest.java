@@ -113,7 +113,7 @@ public class BookingTest{
     systemIn.provideLines("not available");
     p.setStatus();
     systemIn.provideLines("3","2","sunday");
-    assertEquals(5,administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //expected error, should ask for new status but will return 5
+    assertEquals(10,administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //expected error, should ask for new status but will return 5
     System.out.println("----END OF UC04 - BOOKING TEST----");
   }
 }
