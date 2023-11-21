@@ -125,6 +125,7 @@ public class BookingTest{
     assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //teste booking
     for(int i = 1; i < ps.size(); i++){
       ps.get(i).addInbox("Invited for "+ p.getName() + " from 3 to 5 PM at sunday");
+      systemOutRule.clearLog();
       ps.get(i).viewInbox(); //verificar se impressão foi que estava vazia ou não
       assertEquals("Invited for "+ p.getName() + " from 3 to 5 PM at sunday", systemOutRule.getLog());
     }
