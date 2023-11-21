@@ -15,6 +15,7 @@ import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertNotEquals;
 
 public class BookingTest{
   private Administrator administrator;
@@ -97,14 +98,22 @@ public class BookingTest{
   }
   @Test
   public void bookTest(){
-    
     int beforeBal = p1.getBalance();
     systemIn.provideLines("3","2","sunday");
     assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //teste booking
     for(int i = 1; i < ps.size(); i++){
-      ps.get(i).addInbox("Invited for"+ p.getName() + "from 3 to 5 PM at sunday");
+      ps.get(i).addInbox("Invited for "+ p.getName() + " from 3 to 5 PM at sunday");
       ps.get(i).viewInbox(); //verificar se impressão foi que estava vazia ou não
     }
     
+  }
+  @Test
+  public void bookingExceptionTest(){
+    System.out.println("--Exception Flow--");
+    systemIn.provideLines("not available");
+    p.setStatus();
+    systemIn.provideLines("3","2","sunday")
+    assertNotEquals(5,administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //expected error, should ask for new status but will return 5
+    System.out.println("----END OF UC04 - BOOKING TEST----");
   }
 }
