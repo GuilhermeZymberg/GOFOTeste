@@ -44,7 +44,7 @@ public class BookingTest{
     systemIn.provideLines("available");
     p.setStatus();
     p.setCancellationPeriod(2);
-    systemIn.provideLines("1", "4");
+    systemIn.provideLines("1", "5");
     p.setBooking();
     systemIn.provideLines("5");
     p.setPrice();
