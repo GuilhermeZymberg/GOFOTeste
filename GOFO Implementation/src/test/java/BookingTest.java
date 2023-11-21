@@ -119,13 +119,14 @@ public class BookingTest{
     po.setLocation("mk");
     po.addPlayground(p);
     
-  }
-  @Test
-  public void bookTest(){
     //setup for cancelbooking assertion
     systemOutRule.clearLog();
     p.freeSlots();
     free = systemOutRule.getLog();
+  }
+  @Test
+  public void bookTest(){
+    
     int beforeBal = p1.getBalance();
     systemIn.provideLines("3","2","sunday");
     assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //teste booking
