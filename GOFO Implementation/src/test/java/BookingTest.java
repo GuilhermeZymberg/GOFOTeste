@@ -147,7 +147,8 @@ public class BookingTest{
     for(int i = 3; i < 5; i++){
       p.cancelBooking("sunday",Integer.toString(i));
     }
-    p.setStatus("available");
-    p.displayFreeSlots();
+    systemIn.provideLines("available");
+    p.setStatus();
+    p.freeSlots();
   }
 }
