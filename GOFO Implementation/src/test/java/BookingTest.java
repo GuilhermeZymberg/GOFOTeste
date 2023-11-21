@@ -37,6 +37,7 @@ public class BookingTest{
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
   @Before
   public void setUp(){
+    free = "";
     p = new Playground();
     administrator = new Administrator();
     ps = new ArrayList<Player>();
