@@ -52,7 +52,7 @@ public class BookingTest{
     
     
   }
-  /*@Test
+  @Test
   public void bookTest(){
     //p1 setup - user and balance
     p1.setBalance();
@@ -93,10 +93,13 @@ public class BookingTest{
     ps.add(p2);
     ps.add(p3);
     int beforeBal = p1.getBalance();
-    systemIn.provideLines("2","Teste");
-    Scanner input = new Scanner(System.in);
-    pu.Booking(input,p1.getID(),ps,p1.getEmail(),p1.getBalance());
+    systemIn.provideLines("3","1","sunday");
+    administrator.bookByName("Teste",p1.getFullName(),p1.getBalance());
     assertEquals(beforeBal - 1, p1.getBalance()); //teste booking
+    for(int i = 1; i < ps.size(); i++{
+      ps.get(i).addInbox("Invited for"+ p1.getName() + "from 3 to 4 PM at sunday");
+      System.out.println(ps.get(i).Inbox.get(0));
+    }
     
-  }*/
+  }
 }
