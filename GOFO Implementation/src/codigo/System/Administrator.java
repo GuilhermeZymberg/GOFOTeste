@@ -117,6 +117,7 @@ public class Administrator {
         }
         boolean x = false;
         for (int i = 0; i < Approved.size(); i++) {
+            System.out.println(Approved.get(i).getName() + "==========================================");
             if(Approved.get(i).getName().equals(Name)){
                 System.out.println("PlayGround Number :" + (i+1));
                 System.out.println("PlayGround Status :" + Approved.get(i).getStatus());
