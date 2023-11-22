@@ -14,7 +14,8 @@ import static org.junit.Assert.assertThrows;
 
 public class PlayerTest{
   
-  private Administrator administrator;
+  private Player p;
+  private Player pt;
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
