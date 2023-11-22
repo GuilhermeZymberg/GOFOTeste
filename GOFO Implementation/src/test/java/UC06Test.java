@@ -34,12 +34,16 @@ public class UC06Test {
     admin.playgroundRequests(playGround);
     systemIn.provideLines("yes");
     admin.approvePlayground();
-
-    System.out.println("----UC06 - TEST----");
   }
 
   @Test
-  public void Teste(){
+  public void TesteUC06(){
+    System.out.println("----UC06 - TEST----");
     admin.searchByLocation("sbc");
+  }
+
+  @Test
+  public void TestUC07(){
+    admin.addComplaints("Gol está sem rede");
   }
 }
