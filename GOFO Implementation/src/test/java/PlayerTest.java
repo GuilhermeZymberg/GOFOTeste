@@ -12,7 +12,7 @@ import org.junit.Rule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class AdministratorTest{
+public class PlayerTest{
   
   private Administrator administrator;
   
@@ -42,12 +42,12 @@ public class AdministratorTest{
     pt.setPhone(11);
     pt.setEmail("gui@gm.com");
     pt.setLocation("sp"); 
-    assertEquals(p.getBalance(),p.getBalance());
-    assertEquals(p.getFullName(),p.getFullName());
-    assertEquals(p.getPassword(),p.getPassword());
-    assertEquals(p.getID(),p.getID());
-    assertEquals(p.getRule(),p.getRule());
-    assertEquals(p.getPhone(),p.getPhone());
-    assertEquals(p.getEmail(),p.getEmail());
+    assertEquals(pt.getBalance(),p.getBalance());
+    assertEquals(pt.getFullName(),p.getFullName());
+    assertEquals(pt.getPassword(),p.getPassword());
+    assertEquals(pt.getID(),p.getID());
+    assertEquals(pt.getRule(),p.getRule());
+    assertEquals(pt.getPhone(),p.getPhone());
+    assertEquals(pt.getEmail(),p.getEmail());
   }
 }
