@@ -33,7 +33,6 @@ public class PlayerTest{
     p.editPlayerinfo();
     p.editPlayerinfo();
     p.editPlayerinfo();
-    p.editPlayerinfo();
     
     pt.setFName("gui");
     pt.setLName("z");
