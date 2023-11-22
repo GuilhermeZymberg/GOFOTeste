@@ -47,8 +47,7 @@ public class BookingTest{
     po = new PlaygroundOwner();
     //po setup
     e = new eWallet();
-    System.out.println("----UC04 - BOOKING TEST----");
-    System.out.println("--Main Flow--");
+    
     //playground setup
     p.setName("Teste");
     p.setOwner("Robinson");
@@ -126,7 +125,8 @@ public class BookingTest{
   }
   @Test
   public void bookTest(){
-    
+    System.out.println("----UC04 - BOOKING TEST----");
+    System.out.println("--Main Flow--");
     int beforeBal = p1.getBalance();
     systemIn.provideLines("3","2","sunday");
     assertEquals(beforeBal - 10, p1.getBalance() - administrator.bookByName("Teste",p1.getFullName(),p1.getBalance())); //teste booking
@@ -160,5 +160,6 @@ public class BookingTest{
     systemOutRule.clearLog();
     p.freeSlots();
     assertEquals(free,systemOutRule.getLog());
+    System.out.println("----END OF UC03 - CANCEL BOOKING TEST----");
   }
 }
