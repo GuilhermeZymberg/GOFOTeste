@@ -23,6 +23,7 @@ public class UC06Test {
   
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
   @Before
