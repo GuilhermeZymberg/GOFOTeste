@@ -39,6 +39,6 @@ public class UC06Test {
 
   @Test
   public void Teste(){
-    admin.searchByName("Playground1");
+    admin.searchByLocation("sbc");
   }
 }
