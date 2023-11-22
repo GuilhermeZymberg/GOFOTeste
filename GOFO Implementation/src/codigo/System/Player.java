@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Player extends userProfile {
 
-    Scanner input = new Scanner(System.in);
+    
     ArrayList<ArrayList<String>> Bookedslots;
     ArrayList<Player> team;
     ArrayList<String> Inbox;
@@ -41,6 +41,7 @@ public class Player extends userProfile {
      * set player balance, it used to read balance as input from player
      */
     public void setBalance() {
+        Scanner input = new Scanner(System.in);
         String temp;
         int bal;
         System.out.println("Enter your balance");
@@ -101,6 +102,7 @@ public class Player extends userProfile {
      * editing the player's info
      */
     public void editPlayerinfo() {
+        Scanner input = new Scanner(System.in);
         int integerValue = 0;
         String choice;
         String stringValue;
