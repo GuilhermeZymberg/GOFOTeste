@@ -25,15 +25,15 @@ public class PlayerTest{
     pt = new Player();
   }
   @Test
-  public void editPlayerInfoTest(){
+  public void editPlayerinfoTest(){
     systemIn.provideLines("1","gui","2","z","3","7","4","gui@gm.com","5","11","6","sp","7,","1234"); //fname, lname, id, email, phone, loc, password
-    p.editPlayerInfo();
-    p.editPlayerInfo();
-    p.editPlayerInfo();
-    p.editPlayerInfo();
-    p.editPlayerInfo();
-    p.editPlayerInfo();
-    p.editPlayerInfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
+    p.editPlayerinfo();
     p.setBalance();
     pt.setFName("gui");
     pt.setLName("z");
