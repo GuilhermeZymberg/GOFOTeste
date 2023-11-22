@@ -26,20 +26,24 @@ public class PlayerTest{
   }
   @Test
   public void editPlayerinfoTest(){
-    systemIn.provideLines("1","gui","2","z","3","7","4","gui@gm.com","5","11","6","sp","7,","1234"); //fname, lname, id, email, phone, loc, password
+    systemIn.provideLines("1","gui");
     p.editPlayerinfo();
+    systemIn.provideLines("2","z");
     p.editPlayerinfo();
+    systemIn.provideLines("3","7");
     p.editPlayerinfo();
+    systemIn.provideLines("4","gui@gm.com");
     p.editPlayerinfo();
+    systemIn.provideLines("5","11");
     p.editPlayerinfo();
-    p.editPlayerinfo();
+    systemIn.provideLines("7,","1234");
+    p.editPlayerinfo(); 
     
     pt.setFName("gui");
     pt.setLName("z");
     pt.setID(7);
     pt.setEmail("gui@gm.com");
     pt.setPhone(11);
-    pt.setLocation("sp"); 
     pt.setPassword("1234");
     
     assertEquals(pt.getFullName(),p.getFullName());
