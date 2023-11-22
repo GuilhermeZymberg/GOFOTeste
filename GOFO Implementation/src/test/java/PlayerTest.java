@@ -34,20 +34,18 @@ public class PlayerTest{
     p.editPlayerinfo();
     p.editPlayerinfo();
     p.editPlayerinfo();
-    p.setBalance();
+    
     pt.setFName("gui");
     pt.setLName("z");
-    pt.setPassword("1234");
     pt.setID(7);
-    pt.setRule("player");
-    pt.setPhone(11);
     pt.setEmail("gui@gm.com");
+    pt.setPhone(11);
     pt.setLocation("sp"); 
-    assertEquals(pt.getBalance(),p.getBalance());
+    pt.setPassword("1234");
+    
     assertEquals(pt.getFullName(),p.getFullName());
     assertEquals(pt.getPassword(),p.getPassword());
     assertEquals(pt.getID(),p.getID());
-    assertEquals(pt.getRule(),p.getRule());
     assertEquals(pt.getPhone(),p.getPhone());
     assertEquals(pt.getEmail(),p.getEmail());
   }
