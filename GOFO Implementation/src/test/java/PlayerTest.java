@@ -36,7 +36,7 @@ public class PlayerTest{
     p.editPlayerinfo();
     systemIn.provideLines("5","11");
     p.editPlayerinfo();
-    systemIn.provideLines("7,","1234");
+    systemIn.provideLines("7","1234");
     p.editPlayerinfo(); 
     
     pt.setFName("gui");
