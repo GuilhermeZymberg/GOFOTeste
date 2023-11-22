@@ -30,7 +30,7 @@ public class PlayerTest{
     p.editPlayerinfo();
     systemIn.provideLines("2","z");
     p.editPlayerinfo();
-    systemIn.provideLines("3","7");
+    systemIn.provideLines("3","13");
     p.editPlayerinfo();
     systemIn.provideLines("4","gui@gm.com");
     p.editPlayerinfo();
@@ -41,7 +41,7 @@ public class PlayerTest{
     
     pt.setFName("gui");
     pt.setLName("z");
-    pt.setID(7);
+    pt.setID(13);
     pt.setEmail("gui@gm.com");
     pt.setPhone(11);
     pt.setPassword("1234");
