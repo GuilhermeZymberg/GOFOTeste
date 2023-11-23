@@ -48,9 +48,18 @@ public class UC08Test {
   @Test
   public void criaTime(){
     Scanner input = new Scanner(System.in);
-    System.out.println("UC08 ---------------------------------------------------------------------------------------------");
+    System.out.println("UC08 - Case 1");
     pui = new PlayerUI();
     systemIn.provideLines("4", "1", "pedro2@gmail.com", "12");
+    pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
+  }
+  
+  @Test
+  public void criaTime2(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("UC08 - Case 2");
+    pui = new PlayerUI();
+    systemIn.provideLines("4", "1", "pedro56@gmail.com", "12");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
   }
 }
