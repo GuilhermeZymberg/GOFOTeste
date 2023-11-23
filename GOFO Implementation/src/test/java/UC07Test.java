@@ -3,7 +3,7 @@ import System.PlayGroundSchedule;
 import System.Administrator;
 import System.Playground;
 import System.Player;
-import UI.SystemUI;
+import UI.PlayerUI;
 import java.io.*;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
@@ -31,7 +31,6 @@ public class UC07Test {
 
   @Before
   public void setUp() {
-    sui = new SystemUI();
     player = new Player();
     player.setEmail("pedro@gmail.com");
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
@@ -40,14 +39,16 @@ public class UC07Test {
     admin.playgroundRequests(playGround);
     systemIn.provideLines("yes");
     admin.approvePlayground();
-    systemIn.provideLines("2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "sbc", "player");
-    sui.accountMenu();
+
+    pui = new PlayerUI();
   }
 
   @Test
   public void reclamacao(){
     System.out.println("UC07 =======================================");
-    systemIn.provideLines("player", "pedro@gmail.com", "Campo não tem rede");
-    sui.complaintForm();
+    systemIn.provideLines("12", "2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "sbc", "player", "7", "player", "pedro@gmail.com", "Campo não tem rede");
+    pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
+    //systemIn.provideLines("player", "pedro@gmail.com", "Campo não tem rede");
+    //sui.complaintForm();
   }
 }
