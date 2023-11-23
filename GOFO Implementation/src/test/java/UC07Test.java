@@ -8,6 +8,7 @@ import java.io.*;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
+import java.util.ArrayList;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -22,7 +23,8 @@ public class UC07Test {
   private Playground playGround;
   private Administrator admin;
   private Player player;
-  private SystemUI sui;
+  private PlayerUI pui;
+  private ArrayList<Player> Aplayer = new ArrayList<Player>();
   
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -45,6 +47,7 @@ public class UC07Test {
 
   @Test
   public void reclamacao(){
+    Scanner input = new Scanner(System.in);
     System.out.println("UC07 =======================================");
     systemIn.provideLines("12", "2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "sbc", "player", "7", "player", "pedro@gmail.com", "Campo não tem rede");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
