@@ -17,7 +17,7 @@ import org.junit.Rule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class UserRegistrationTest{
+public class UC01Test{
   private userProfile user1;
   private userProfile user2;
   private SystemUI s;
