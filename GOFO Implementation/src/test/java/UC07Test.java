@@ -40,8 +40,8 @@ public class UC07Test {
     admin.playgroundRequests(playGround);
     systemIn.provideLines("yes");
     admin.approvePlayground();
-    systemIn.provideLines("Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "sbc", "player");
-    sui.register();
+    systemIn.provideLines("2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "sbc", "player");
+    sui.accountMenu();
   }
 
   @Test
