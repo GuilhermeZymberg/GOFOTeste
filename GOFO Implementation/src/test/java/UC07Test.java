@@ -33,11 +33,7 @@ public class UC07Test {
   public void setUp() {
     sui = new SystemUI();
     player = new Player();
-    player2 = new Player();
-    Aplayer.add(player);
-    Aplayer.add(player2);
     player.setEmail("pedro@gmail.com");
-    player2.setEmail("pedro2@gmail.com");
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
     admin = new Administrator();
