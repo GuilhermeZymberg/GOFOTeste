@@ -39,6 +39,7 @@ public class UC08Test {
     Aplayer.add(player);
     Aplayer.add(player2);
     player.setEmail("pedro@gmail.com");
+    player2.setEmail("pedro2@gmail.com");
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
     admin = new Administrator();
@@ -49,7 +50,7 @@ public class UC08Test {
     Scanner input = new Scanner(System.in);
     System.out.println("UC08 ---------------------------------------------------------------------------------------------");
     pui = new PlayerUI();
-    systemIn.provideLines("4", "1");
+    systemIn.provideLines("4", "1", "pedro2@gmail.com");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
   }
 }
