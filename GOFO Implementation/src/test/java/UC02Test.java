@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
 
-public class PlaygroundRegistrationTest{
+public class UC02Test{
   private PlaygroundOwner pg1;
   private PlaygroundOwner pg2;
   private playgroundOwnerUI pu;
