@@ -34,7 +34,6 @@ public class UC08Test {
    
   @Before
   public void setUp() {
-    Scanner input = new Scanner(System.in);
     player = new Player();
     player2 = new Player();
     Aplayer.add(player);
@@ -47,6 +46,7 @@ public class UC08Test {
 
   @Test
   public void criaTime(){
+    Scanner input = new Scanner(System.in);
     System.out.println("UC08 ---------------------------------------------------------------------------------------------");
     systemIn.provideLines(4, 1);
     pui = new PlayerUI(input, 0, Aplayer, "Pedro", 40);
