@@ -23,7 +23,7 @@ public class UC08Test {
   private Administrator admin;
   private Player player, player2;
   private PlayerUI pui;
-  private ArrayList<Player> Aplayer = new ArrayList<Player>;
+  private ArrayList<Player> Aplayer = new ArrayList<Player>();
   
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
