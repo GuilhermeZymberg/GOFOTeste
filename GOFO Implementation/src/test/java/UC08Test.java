@@ -48,7 +48,7 @@ public class UC08Test {
   public void criaTime(){
     Scanner input = new Scanner(System.in);
     System.out.println("UC08 ---------------------------------------------------------------------------------------------");
-    systemIn.provideLines(4, 1);
+    systemIn.provideLines("4", "1");
     pui = new PlayerUI(input, 0, Aplayer, "Pedro", 40);
   }
 }
