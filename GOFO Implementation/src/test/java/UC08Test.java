@@ -42,7 +42,6 @@ public class UC08Test {
     player2.setEmail("pedro2@gmail.com");
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
-    admin = new Administrator();
   }
 
   @Test
