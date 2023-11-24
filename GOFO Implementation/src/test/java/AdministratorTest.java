@@ -81,7 +81,7 @@ public class AdministratorTest{
   }
   @Test
   public void getApprovedTest(){
-    assertEquals("Bão",administrator.getApproved();
+    assertEquals("Bão",administrator.getApproved());
   }
   @Test
   public void playgroundRequestsTest(){
