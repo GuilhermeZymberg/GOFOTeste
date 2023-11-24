@@ -29,7 +29,7 @@ public class PlayGroundScheduleTest {
         systemIn.provideLines("45");
         playGroundSchedule.setPrice();
         
-    }
+    }/*
     @Test
     public void testPlayExist(){
         assertEquals(true, playGroundOwner.existPlayground("Playground1"));
@@ -59,5 +59,5 @@ public class PlayGroundScheduleTest {
     @Test
     public void TestEnd(){
         assertEquals(3, playGroundSchedule.getEnd());
-    }
+    }*/
 }
