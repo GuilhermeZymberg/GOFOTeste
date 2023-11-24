@@ -32,7 +32,7 @@ public class UC02ExceptionTest {
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
-
+/*
   @Before
   public void setUp(){
     e1 = new eWallet();
@@ -42,5 +42,5 @@ public class UC02ExceptionTest {
     pu = new playgroundOwnerUI();
     pgs = new ArrayList<PlaygroundOwner>();
     p = new Playground();
-  }
+  }*/
 }
