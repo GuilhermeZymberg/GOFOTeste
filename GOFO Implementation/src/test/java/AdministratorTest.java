@@ -76,7 +76,7 @@ public class AdministratorTest{
   @Test
   public void testBookByLocations(){
     System.out.println("----TESTE BOOK BY LOCATION----");
-    systemIn.provideLines("2","1","monday"); //hora: 1h, duração de 1h, no dia 12
+    systemIn.provideLines("1","1","monday"); //hora: 1h, duração de 1h, no dia 12
     int res = administrator.bookByLocation("sp","james",51); 
     assertEquals(50,res);
     System.out.println("----FIM BOOK BY LOCATION----");
