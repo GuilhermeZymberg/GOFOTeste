@@ -52,7 +52,7 @@ public class UC07Test {
     System.out.println("UC07 =======================================");
     systemIn.provideLines("12", "2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "40028922", "sbc", "player", "50", "7", "player", "pedro@gmail.com", "Campo não tem rede", "12", "3");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
-    //systemIn.provideLines("player", "pedro@gmail.com", "Campo não tem rede");
-    //sui.complaintForm();
+    systemIn.provideLines("player", "pedro@gmail.com", "Campo não tem rede");
+    sui.complaintForm();
   }
 }
