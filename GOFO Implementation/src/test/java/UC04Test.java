@@ -31,7 +31,7 @@ public class UC04Test{
     s = new SystemUI();
   }
   @Test
-  public void cancelBookingTest(){
+  public void bookingTest(){
     exit.expectSystemExitWithStatus(0);
      systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","1","cetobarrero","gg","4","available","1","4","10","8","1","admin@gmail.com","123","1","yes","6","2","gu","z", "7","1234", "gu@gm.com","11", "sp","player","50","bolinha","1","gu@gm.com","1234","3","2","cetobarrero","1","2","saturday","12","3");
     s.accountMenu();
