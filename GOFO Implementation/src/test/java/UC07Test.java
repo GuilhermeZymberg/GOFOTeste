@@ -5,7 +5,7 @@ import System.Playground;
 import System.Player;
 import UI.PlayerUI;
 import java.io.*;
-import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,7 +28,7 @@ public class UC07Test {
   private ArrayList<Player> Aplayer = new ArrayList<Player>();
   
   @Rule
-  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
@@ -48,6 +48,7 @@ public class UC07Test {
 
   @Test
   public void reclamacao(){
+    exit.expectSystemExitWithStatus(0);
     Scanner input = new Scanner(System.in);
     System.out.println("UC07 =======================================");
     systemIn.provideLines("12", "2", "Pedro", "Paizam", "0", "senha", "pedro@gmail.com", "40028922", "sbc", "player", "50", "7", "player", "pedro@gmail.com", "Campo não tem rede", "12");
