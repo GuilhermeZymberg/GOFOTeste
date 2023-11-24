@@ -17,12 +17,7 @@ import static org.junit.Assert.assertThrows;
 
 public class UC05ExceptionTest {
 
-  private PlayGroundSchedule playGroundSchedule;
-  private Playground playGround;
-  private Administrator admin;
-  private Player player;
-  private PlayerUI pui;
-  private ArrayList<Player> Aplayer = new ArrayList<Player>();
+  private SystemUI s;
   
   @Rule
   public final ExpectedSystemExit exit = ExpectedSystemExit.none();
