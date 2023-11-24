@@ -104,7 +104,7 @@ public class PlayGroundScheduleTest {
         assertEquals("not available", playGround.getStatus());
     }
     @Test
-    public void testSetStatus(){
+    public void testSetSchedule(){
         playGround().setSchedule(playGroundSchedule2);
         assertEquals("not available", playGround.getStatus());
     }
