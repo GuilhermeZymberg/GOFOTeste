@@ -46,4 +46,12 @@ public class UC06Test {
 
     pui = new PlayerUI();
   }
+
+  @Test
+  public void TesteUC06_Excep(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("UC06 =============");
+    systemIn.provideLines("11", "SaBC", "12", "3");
+    pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
+  }
 }
