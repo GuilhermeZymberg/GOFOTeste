@@ -1,12 +1,11 @@
 package codigo.src;
+
 import System.userProfile;
-import UI.playgroundOwnerUI;
-import System.Playground;
-import System.PlaygroundOwner;
-import System.eWallet;
+import UI.SystemUI;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
@@ -20,25 +19,22 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
 
 public class UC02Test{
-  private PlaygroundOwner pg1;
-  private PlaygroundOwner pg2;
-  private playgroundOwnerUI pu;
-  private Playground p;
-  private eWallet e1;
-  private eWallet e2;
-  static ArrayList<PlaygroundOwner> pgs;
+  private SystemUI s;
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Rule
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+  
   @Before
   public void setUp(){
-    e1 = new eWallet();
-    e2 = new eWallet();
-    pg1 =  new PlaygroundOwner();
-    pg2 = new PlaygroundOwner();
-    pu = new playgroundOwnerUI();
-    pgs = new ArrayList<PlaygroundOwner>();
-    p = new Playground();
+    s = new SystemUI();
+  }
+  @Test
+  public void addPlaygroundTest(){
+    exit.expectSystemExitWithStatus(0);
+    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","player","50","bolinha","3","1","gui@gm.com","11","ceto barrero","gg","4","available","4","3","10","3");
+    s.accountMenu();
   }
 }/*
   @Test
