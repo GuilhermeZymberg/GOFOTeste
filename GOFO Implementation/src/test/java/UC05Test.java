@@ -54,3 +54,4 @@ public class UC05Test {
     systemIn.provideLines("3", "1", "SBC", "12", "3");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
   }
+}
