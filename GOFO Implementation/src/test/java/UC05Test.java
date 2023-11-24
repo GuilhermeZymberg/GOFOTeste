@@ -46,3 +46,11 @@ public class UC05Test {
 
     pui = new PlayerUI();
   }
+
+  @Test
+  public void TesteUC05(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("UC05 =============");
+    systemIn.provideLines("3", "1", "SBC", "12", "3");
+    pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
+  }
