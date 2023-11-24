@@ -22,18 +22,29 @@ public class eWalletTest{
   public void setUp(){
     e = new eWallet();
     e.setBalance(100);
-  }/*
+  }
   @Test
   public void setBalanceTest(){
+    System.out.println("----TESTE SET BALANCE----");
     systemIn.provideLines("200");
     e.setBalance();
     assertEquals(200,e.getBalance());
+    System.out.println("----FIM----");
   }
   @Test
   public void depositWithdrawTest(){
+    System.out.println("----TESTE DEPOSIT E WITHDRAW----");
     e.setBalance(2);
     e.deposit(50);
     e.withdraw(42);
     assertEquals(10,e.getBalance());
-  }*/
+    System.out.println("----FIM----");
+  }
+  @Test
+  public void getBalanceTest(){
+    System.out.println("----TESTE GET BALANCE E SET BALANCE----");
+    e.setBalance(5);
+    assertEquals(5,e.getBalance());
+    System.out.println("----FIM----");
+  }
 }
