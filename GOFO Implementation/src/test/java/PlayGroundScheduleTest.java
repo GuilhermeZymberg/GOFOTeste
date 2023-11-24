@@ -94,8 +94,8 @@ public class PlayGroundScheduleTest {
     @Test
     public void testSetPrice(){
         systemIn.provideLines("40");
-        playGround.setLocation();
-        assertEquals("SP", playGround.getLocation());
+        playGround.setPrice();
+        assertEquals("SP", playGround.getPrice());
     }
     @Test
     public void testSetStatus(){
