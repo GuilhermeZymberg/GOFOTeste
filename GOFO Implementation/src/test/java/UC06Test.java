@@ -5,7 +5,7 @@ import System.Playground;
 import System.Player;
 import UI.PlayerUI;
 import java.io.*;
-import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -29,9 +29,9 @@ public class UC06Test {
   private ArrayList<Player> Aplayer = new ArrayList<Player>();
   
   @Rule
-  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
-  @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Rule
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
   @Before
   public void setUp() {
@@ -49,6 +49,7 @@ public class UC06Test {
 
   @Test
   public void TesteUC06(){
+    exit.expectSystemExitWithStatus(0);
     Scanner input = new Scanner(System.in);
     System.out.println("UC06 =============");
     systemIn.provideLines("11", "SBC", "12", "3");
