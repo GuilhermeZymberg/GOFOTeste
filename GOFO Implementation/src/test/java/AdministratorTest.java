@@ -91,8 +91,8 @@ public class AdministratorTest{
   }
   @Test
   public void approvePlaygroundTest(){
-    systemIn.provideLines("yes");
     administrator.playgroundRequests(play2);
+    systemIn.provideLines("yes");
     administrator.approvePlayground();
   }
   @Test
