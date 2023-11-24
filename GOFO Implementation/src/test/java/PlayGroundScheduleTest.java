@@ -30,7 +30,7 @@ public class PlayGroundScheduleTest {
         playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
         playGroundOwner = new PlaygroundOwner();
         playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
-        admin = new admin();
+        admin = new Administrator();
         player = new Player();
         playGroundOwner.addPlayground(playGround);
         systemIn.provideLines("45");
