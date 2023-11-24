@@ -26,6 +26,7 @@ public class PlayGroundScheduleTest {
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
     private PlayGroundSchedule playGroundSchedule;
+    private PlayGroundSchedule playGroundSchedule2;
     private PlaygroundOwner playGroundOwner;
     private Playground playGround;
     private Administrator admin;
@@ -34,6 +35,7 @@ public class PlayGroundScheduleTest {
     @Before
     public void setUp() {
         playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
+        playGroundSchedule2 = new PlayGroundSchedule("not available", 2, 1, 3);
         playGroundOwner = new PlaygroundOwner();
         playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
         admin = new Administrator();
@@ -43,9 +45,9 @@ public class PlayGroundScheduleTest {
     
     /* PLAYGROUND */
 
+    /* GET */
     @Test
     public void testGetCancel(){
-        System.out.println("=========================" + playGround.getCancellationPeriod() + "==============================");
         assertEquals(2, playGround.getCancellationPeriod());
     }
     @Test
@@ -75,6 +77,53 @@ public class PlayGroundScheduleTest {
     @Test
     public void testGetOwner(){
         assertEquals("Pedro", playGround.getOwner());
+    }
+
+    /* SET */
+    @Test
+    public void testSetCancel(){
+        playGround().setCancellationPeriod(3);
+        assertEquals(3, playGround.getCancellationPeriod());
+    }
+    @Test
+    public void testSetPlace(){
+        systemIn.provideLines("SP");
+        playGround().setLocation();
+        assertEquals("SP", playGround.getLocation());
+    }
+    @Test
+    public void testSetPrice(){
+        systemIn.provideLines("40");
+        playGround().setLocation();
+        assertEquals("SP", playGround.getLocation());
+    }
+    @Test
+    public void testSetStatus(){
+        systemIn.provideLines("not available");
+        playGround().setStatus();
+        assertEquals("not available", playGround.getStatus());
+    }
+    @Test
+    public void testSetStatus(){
+        playGround().setSchedule(playGroundSchedule2);
+        assertEquals("not available", playGround.getStatus());
+    }
+    
+
+    /* BOOKING */
+    @Test
+    public void testBooking(){
+        playGround.bookingTheSlot("Pedro", "2", "sunday");
+    }
+    @Test
+    public void testFree(){
+        playGround.freeSlots();
+    }
+    @Test
+    public void testSetBooking(){
+        systemIn.provideLines("2", "4");
+        playGround.setBooking();
+        assertEquals(40, playGround.getPrice());
     }
     
     /*
