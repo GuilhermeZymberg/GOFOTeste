@@ -43,7 +43,6 @@ public class Playground {
      */
     public int getCancellationPeriod() {
         return cancellationPeriod;
-
     }
     /**
      * booking slot from the booking schedule
