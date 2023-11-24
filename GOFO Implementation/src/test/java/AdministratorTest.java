@@ -42,7 +42,7 @@ public class AdministratorTest{
     systemIn.provideLines("available");
     play1.setStatus();
     play1.setCancellationPeriod(2);
-    systemIn.provideLines("1", "14");
+    systemIn.provideLines("1", "5");
     play1.setBooking();
     systemIn.provideLines("1");
     play1.setPrice();
