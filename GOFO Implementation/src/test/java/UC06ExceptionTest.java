@@ -19,7 +19,7 @@ import org.junit.Rule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class UC06Test {
+public class UC06ExceptionTest {
 
   private PlayGroundSchedule playGroundSchedule;
   private Playground playGround;
