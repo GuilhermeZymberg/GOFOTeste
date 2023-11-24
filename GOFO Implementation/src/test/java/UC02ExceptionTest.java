@@ -19,7 +19,7 @@ import org.junit.Rule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class UC06Test {
+public class UC02ExceptionTest {
 
   private PlayGroundSchedule playGroundSchedule;
   private Playground playGround;
@@ -34,16 +34,13 @@ public class UC06Test {
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
   @Before
-  public void setUp() {
-    player = new Player();
-    player.setEmail("pedro@gmail.com");
-    playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
-    playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
-    admin = new Administrator();
-    admin.playgroundRequests(playGround);
-    systemIn.provideLines("yes");
-    admin.approvePlayground();
-
-    pui = new PlayerUI();
+  public void setUp(){
+    e1 = new eWallet();
+    e2 = new eWallet();
+    pg1 =  new PlaygroundOwner();
+    pg2 = new PlaygroundOwner();
+    pu = new playgroundOwnerUI();
+    pgs = new ArrayList<PlaygroundOwner>();
+    p = new Playground();
   }
 }
