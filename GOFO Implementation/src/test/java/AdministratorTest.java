@@ -83,65 +83,95 @@ public class AdministratorTest{
   }
   @Test
   public void getApprovedTest(){
+    System.out.println("----TESTE APPROVED----");
     administrator.getApproved();
+    System.out.println("----FIM----");
   }
   @Test
   public void playgroundRequestsTest(){
+    System.out.println("----TESTE REQUESTS----");
     administrator.playgroundRequests(play2);
+    System.out.println("----FIM----");
   }
   @Test
   public void approvePlaygroundTest(){
+    System.out.println("----TESTE AAPPROVEPLAY---");
     administrator.playgroundRequests(play2);
     systemIn.provideLines("yes");
     administrator.approvePlayground();
+    System.out.println("----FIM----");
   }
   @Test
   public void displayAllPlaygroundsTest(){
+    System.out.println("----TESTE DISPLAY ALL---");
     administrator.displayAllPlaygrounds();
+    System.out.println("----FIM----");
   }
   @Test
   public void searchByNameTest(){
+    System.out.println("----TESTE SEARCH BY NAME----");
     administrator.searchByName("Bão");
+    System.out.println("----FIM----");
   }
   @Test
   public void searchByLocationTest(){
+    System.out.println("----TESTE SEARCH BY LOCATION----");
     administrator.searchByLocation("sp");
+    System.out.println("----FIM----");
   }
   @Test
   public void displayAllavailablePlaygroundsLocationsTest(){
+    System.out.println("----TESTE DISPLAY ALL LOCATION----");
     administrator.displayAllavailablePlaygroundsLocations();
+    System.out.println("----FIM----");
   }
   @Test
   public void displayAllavailablePlaygroundsNamesTest(){
+    System.out.println("----TESTE DISPLAY ALL NAME----");
     administrator.displayAllavailablePlaygroundsNames();
+    System.out.println("----FIM----");
   }
   @Test
   public void addComplaintsTest(){
+    System.out.println("----TESTE ADD COMPLAINT----");
     administrator.addComplaints("odeio o parque aff");
+    System.out.println("----FIM----");
   }
   @Test
   public void showComplaintsTest(){
+    System.out.println("----TESTE SHOW COMPLAINTS----");
     administrator.showComplaints();
+    System.out.println("----FIM---");
   }
   @Test
   public void getEmailTest(){
+    System.out.println("----TESTE GET EMAIL----");
     assertEquals("admin@gmail.com",administrator.getEmail());
+    System.out.println("----FIM----");
   }
   @Test
   public void getPasswordTest(){
+    System.out.println("----TESTE GET PASSWORD----");
     assertEquals("123",administrator.getPassword());
+    System.out.println("----FIM----");
   }
   @Test
   public void suspendPlaygroundTest(){
+    System.out.println("----TESTE SUSPEND PLAY----");
     administrator.suspendPlayground("Bão"); 
+    System.out.println("----FIM----");
   }
   @Test
   public void unSuspendPlaygroundTest(){
+    System.out.println("----TEST UNSUSPEND PLAY----");
     systemIn.provideLines("yes");
     administrator.unSuspendPlayground();
+    System.out.println("----FIM----");
   }
   @Test
   public void deletePlaygroundTest(){
+    System.out.println("----TEST DELETE PLAYGROUND----");
     administrator.deletePlayground("Bão");
+    System.out.println("----FIM----");
   }
 }
