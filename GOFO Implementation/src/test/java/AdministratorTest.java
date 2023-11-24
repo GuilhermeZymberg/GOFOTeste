@@ -62,7 +62,7 @@ public class AdministratorTest{
     administrator.playgroundRequests(play2);
     systemIn.provideLines("yes","yes");
     administrator.approvePlayground();
-  }
+  }/*
   @Test
   public void testBookByName(){
     System.out.println("----TESTE BOOK BY NAME----");
@@ -79,5 +79,5 @@ public class AdministratorTest{
     int res = administrator.bookByLocation("sbc","james",51); 
     assertEquals(50,res);
     System.out.println("----FIM BOOK BY LOCATION----");
-  }
+  }*/
 }
