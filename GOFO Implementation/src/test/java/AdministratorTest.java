@@ -59,10 +59,9 @@ public class AdministratorTest{
     play2.setPrice();
     
     administrator.playgroundRequests(play1);
-    administrator.playgroundRequests(play2);
-    systemIn.provideLines("yes","yes");
+    systemIn.provideLines("yes");
     administrator.approvePlayground();
-  }/*
+  }
   @Test
   public void testBookByName(){
     System.out.println("----TESTE BOOK BY NAME----");
@@ -76,8 +75,70 @@ public class AdministratorTest{
   public void testBookByLocations(){
     System.out.println("----TESTE BOOK BY LOCATION----");
     systemIn.provideLines("2","1","monday"); //hora: 1h, duração de 1h, no dia 12
-    int res = administrator.bookByLocation("sbc","james",51); 
+    int res = administrator.bookByLocation("Bão","james",51); 
     assertEquals(50,res);
     System.out.println("----FIM BOOK BY LOCATION----");
-  }*/
+  }
+  @Test
+  public void getApprovedTest(){
+    assertEquals("Bão",administrator.getApproved();
+  }
+  @Test
+  public void playgroundRequestsTest(){
+    administrator.playgroundRequests(play2);
+  }
+  @Test
+  public void approvePlaygroundTest(){
+    systemIn.provideLines("yes");
+    administrator.playgroundRequests(play2);
+    administrator.approvePlayground();
+  }
+  @Test
+  public void displayAllPlaygroundsTest(){
+    administrator.displayAllPlaygrounds();
+  }
+  @Test
+  public void searchByNameTest(){
+    administrator.searchByName("Bão");
+  }
+  @Test
+  public void searchByLocationTest(){
+    administrator.searchByLocation("sp");
+  }
+  @Test
+  public void displayAllavailablePlaygroundsLocationsTest(){
+    administrator.displayAllavailablePlaygroundsLocations();
+  }
+  @Test
+  public void displayAllavailablePlaygroundsNamesTest(){
+    administrator.displayAllavailablePlaygroundsNames();
+  }
+  @Test
+  public void addComplaintsTest(){
+    administrator.addComplaints("odeio o parque aff");
+  }
+  @Test
+  public void showComplaintsTest(){
+    administrator.showComplaints();
+  }
+  @Test
+  public void getEmailTest(){
+    assertEquals("admin@gmail.com",administrator.getEmail());
+  }
+  @Test
+  public void getPasswordTest(){
+    assertEquals("123",administrator.getPassword());
+  }
+  @Test
+  public void suspendPlaygroundTest(){
+    administrator.suspendPlayground("Bão"); 
+  }
+  @Test
+  public void unSuspendPlaygroundTest(){
+    administrator.unSuspendPlayground("Bão");
+  }
+  @Test
+  public void deletePlaygroundTest(){
+    administrator.deletePlayground("Bão");
+  }
 }
