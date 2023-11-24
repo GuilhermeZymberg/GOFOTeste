@@ -32,10 +32,7 @@ public class PlayGroundScheduleTest {
         playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
         admin = new Administrator();
         player = new Player();
-        playGroundOwner.addPlayground(playGround);
-        systemIn.provideLines("45");
-        playGroundSchedule.setPrice();
-        
+        playGroundOwner.addPlayground(playGround);        
     }
     
     /* PLAYGROUND */
