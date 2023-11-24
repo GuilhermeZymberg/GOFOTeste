@@ -41,7 +41,6 @@ jobs:
          EXIT_CODE=$?
      #    mvn test -Dtest=PlaygroundOwnerTest test;
      #    mvn test -Dtest=PlaygroundTest test;
-         
       if: always()
       
     - name: Teste UC01
