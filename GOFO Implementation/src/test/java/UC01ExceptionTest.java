@@ -7,6 +7,7 @@ import System.eWallet;
 import java.io.*;
 import java.util.ArrayList;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.IOException;
 
@@ -28,6 +29,8 @@ public class UC01ExceptionTest{
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
   @Before
   public void setUp(){
     e = new eWallet();
