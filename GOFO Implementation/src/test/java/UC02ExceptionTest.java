@@ -1,14 +1,12 @@
 package codigo.src;
-import System.PlayGroundSchedule;
-import System.Administrator;
-import System.Playground;
-import System.Player;
-import UI.PlayerUI;
+
+import System.userProfile;
+import UI.SystemUI;
 import java.io.*;
-import org.junit.contrib.java.lang.system.SystemOutRule;
-import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
 
@@ -17,21 +15,16 @@ import org.junit.Before;
 import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
 
-public class UC02ExceptionTest {
-
-  private PlayGroundSchedule playGroundSchedule;
-  private Playground playGround;
-  private Administrator admin;
-  private Player player;
-  private PlayerUI pui;
-  private ArrayList<Player> Aplayer = new ArrayList<Player>();
+public class UC02ExceptionTest{
+  private SystemUI s;
   
   @Rule
-  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
-  @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Rule
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
   @Test
   public void addPlaygroundTest(){
     exit.expectSystemExitWithStatus(0);
