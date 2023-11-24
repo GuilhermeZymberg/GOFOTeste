@@ -32,7 +32,7 @@ public class UC02ExceptionTest{
   @Test
   public void addPlaygroundTest(){
     exit.expectSystemExitWithStatus(0);
-    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","3","1","gui@gm.com","11","gg","4","available","4","3","10","3");
+    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","1","gg","4","available","4","3","10","8","3");
     s.accountMenu();
   }
 /*
