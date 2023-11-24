@@ -34,10 +34,10 @@ jobs:
     # Add the test step here
     - name: Testes de Unidade
       run: |
-         mvn test -Dtest=AdministratorTest test;
-         mvn test -Dtest=eWalletTest test;
-         mvn test -Dtest=PlayerTest test;
-         mvn test -Dtest=PlayGroundScheduleTest test;
+         mvn -Dtest=AdministratorTest test;
+         mvn -Dtest=eWalletTest test;
+         mvn -Dtest=PlayerTest test;
+         mvn -Dtest=PlayGroundScheduleTest test;
          EXIT_CODE=$?
      #    mvn test -Dtest=PlaygroundOwnerTest test;
      #    mvn test -Dtest=PlaygroundTest test;
