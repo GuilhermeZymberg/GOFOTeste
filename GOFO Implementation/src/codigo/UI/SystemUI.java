@@ -36,7 +36,7 @@ public class SystemUI {
         if (phrase != null && !phrase.equals("") && phrase.matches("^[a-zA-Z]*$")) {
             return phrase;
         } else {
-            System.out.println("please don't enter integers or special characters");
+            System.out.println(phrase + " was bad please don't enter integers or special characters");
             phrase = input.nextLine();
             return isString(phrase);
         }
