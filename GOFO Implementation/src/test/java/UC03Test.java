@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
 
-public class UC02Test{
+public class UC03Test{
   private SystemUI s;
   
   @Rule
