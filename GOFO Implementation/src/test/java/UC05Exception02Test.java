@@ -15,7 +15,7 @@ import org.junit.Rule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class UC05ExceptionTest {
+public class UC05Exception02Test {
 
   private SystemUI s;
   
