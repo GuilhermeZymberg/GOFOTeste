@@ -81,6 +81,16 @@ public class PlayGroundScheduleTest {
 
     /* SET */
     @Test
+    public void testSetOwner(){
+        playGround.setOwner("Jonas");
+        assertEquals("Jonas", playGround.getOwner());
+    }
+    @Test
+    public void testSetName(){
+        playGround.setName("Jonas");
+        assertEquals("Jonas", playGround.getName());
+    }
+    @Test
     public void testSetCancel(){
         playGround.setCancellationPeriod(3);
         assertEquals(3, playGround.getCancellationPeriod());
