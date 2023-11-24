@@ -43,7 +43,7 @@ public class UC08Test {
     playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
     playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
   }
-/*
+
   @Test
   public void criaTime(){
     Scanner input = new Scanner(System.in);
@@ -51,14 +51,5 @@ public class UC08Test {
     pui = new PlayerUI();
     systemIn.provideLines("4", "1", "pedro2@gmail.com", "12");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
-  }*/
-  /*
-  @Test
-  public void criaTime2(){
-    Scanner input = new Scanner(System.in);
-    System.out.println("UC08 - Case 2");
-    pui = new PlayerUI();
-    systemIn.provideLines("4", "1", "pedro56@gmail.com", "12");
-    pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
-  }*/
+  }
 }
