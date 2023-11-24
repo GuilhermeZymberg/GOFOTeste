@@ -95,8 +95,7 @@ public class AdministratorTest{
   }
   @Test
   public void approvePlaygroundTest(){
-    System.out.println("----TESTE AAPPROVEPLAY---");
-    administrator.playgroundRequests(play2);
+    System.out.println("----TESTE APPROVEPLAY---");
     systemIn.provideLines("yes");
     administrator.approvePlayground();
     System.out.println("----FIM----");
