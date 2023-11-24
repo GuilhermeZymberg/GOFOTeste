@@ -48,7 +48,7 @@ public class UC06Test {
   }
 
   @Test
-  public void Teste UC06(){
+  public void TesteUC06(){
     Scanner input = new Scanner(System.in);
     System.out.println("UC06 =======================================");
     systemIn.provideLines("11", "SBC", "12", "3");
