@@ -37,4 +37,10 @@ public class UC01ExceptionTest{
     user1 = new userProfile();
     user2 = new userProfile();
   }
+  @Test
+    public void registerExceptionTest(){
+      exit.expectSystemExitWithStatus(0);
+      systemIn.provideLines("2","2","z", "7","1234", "gui@gm.com","11", "sp","player","50","bolinha","3"); //option, fname, lname, ID, pass, email, phone, loc, balance, validation code, option
+      s.accountMenu();
+    }
 }
