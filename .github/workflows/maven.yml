@@ -32,9 +32,97 @@ jobs:
       run: mvn compile
 
     # Add the test step here
-    - name: Test with Maven
-      run: mvn test
+    - name: Testes de Unidade
+      run: |
+         mvn test -Dtest=AdministratorTest test;
+         mvn test -Dtest=eWalletTest test;
+         mvn test -Dtest=PlayerTest test;
+         mvn test -Dtest=PlayGroundScheduleTest test;
+         EXIT_CODE=$?
+     #    mvn test -Dtest=PlaygroundOwnerTest test;
+     #    mvn test -Dtest=PlaygroundTest test;
+         
+      if: always()
+      
+    - name: Teste UC01
+      run:
+        mvn test -Dtest=UC01Test test
+      if: always()
+      
+    - name: Teste UC01Exception
+      run:
+        mvn -Dtest=UC01ExceptionTest test
+      if: always()
+      
+    - name: Teste UC02
+      run:
+        mvn -Dtest=UC02Test test 
+      if: always()
+      
+    - name: Teste UC02Exception
+      run:
+        mvn -Dtest=UC02ExceptionTest test 
+      if: always()
+      
+    - name: Teste UC03
+      run:
+        mvn -Dtest=UC03Test test 
+      if: always()
 
+    - name: Teste UC03Exception
+      run:
+        mvn -Dtest=UC03ExceptionTest test 
+      if: always()
+
+    - name: Teste UC04
+      run:
+        mvn -Dtest=UC04Test test 
+      if: always()
+
+    - name: Teste UC04Exception
+      run:
+        mvn -Dtest=UC04ExceptionTest test 
+      if: always()
+
+    - name: Teste UC05
+      run:
+        mvn -Dtest=UC05Test test 
+      if: always()
+
+    - name: Teste UC05Exception
+      run:
+        mvn -Dtest=UC05ExceptionTest test 
+      if: always()
+
+    - name: Teste UC06
+      run:
+        mvn -Dtest=UC06Test test 
+      if: always()
+
+    - name: Teste UC06Exception
+      run:
+        mvn -Dtest=UC06ExceptionTest test 
+      if: always()
+
+    - name: Teste UC07
+      run:
+        mvn -Dtest=UC07Test test 
+      if: always()
+
+    - name: Teste UC07Exception
+      run:
+        mvn -Dtest=UC07ExceptionTest test 
+      if: always()
+
+    - name: Teste UC08
+      run:
+        mvn -Dtest=UC08Test test 
+      if: always()
+
+    - name: Teste UC08Exception
+      run:
+        mvn -Dtest=UC08ExceptionTest test 
+      if: always()
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
