@@ -51,7 +51,7 @@ public class UC06Test {
   public void TesteUC06(){
     Scanner input = new Scanner(System.in);
     System.out.println("UC06 =======================================");
-    systemIn.provideLines("11", "SBC", "12", "3");
+    systemIn.provideLines("11", "SBC", "12");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
   }
 /*
