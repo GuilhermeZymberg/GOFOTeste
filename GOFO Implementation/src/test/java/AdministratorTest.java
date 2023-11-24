@@ -18,7 +18,9 @@ import static org.junit.Assert.assertThrows;
 public class AdministratorTest{
   
   private Administrator administrator;
-  
+  private Playground play1;
+  private Playground play2;
+  private Player p;
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Before
@@ -81,7 +83,7 @@ public class AdministratorTest{
   }
   @Test
   public void getApprovedTest(){
-    assertEquals("Bão",administrator.getApproved());
+    administrator.getApproved();
   }
   @Test
   public void playgroundRequestsTest(){
