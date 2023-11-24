@@ -1,14 +1,12 @@
 package codigo.src;
-import System.Administrator;
-import System.Playground;
-import System.PlaygroundOwner;
-import System.Player;
-import System.eWallet;
-import UI.PlayerUI;
-import java.util.ArrayList;
+
+import System.userProfile;
+import UI.SystemUI;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
-import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import java.io.IOException;
 
@@ -17,27 +15,29 @@ import org.junit.Before;
 import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertNotEquals;
 
-public class UC03Test{
-  private Administrator administrator;
-  private Player p1;
-  private Player p2;
-  private Player p3;
-  private Playground p;
-  private PlayerUI pu;
-  private ArrayList<Player> ps;
-  private PlaygroundOwner po;
-  private eWallet e;
-  private String free;
+public class UC02Test{
+  private SystemUI s;
+  
   @Rule
-    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Rule
-    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+  
   @Before
   public void setUp(){
-    free = "";
+    s = new SystemUI();
+  }
+  @Test
+  public void cancelBookingTest(){
+    exit.expectSystemExitWithStatus(0);
+    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","1","ceto barrero","gg","4","available","4","3","10","8",("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","3","2","ceto barrero");
+    s.accountMenu();
+  }
+}
+    /*free = "";
     p = new Playground();
     administrator = new Administrator();
     ps = new ArrayList<Player>();
@@ -122,7 +122,7 @@ public class UC03Test{
     systemOutRule.clearLog();
     p.freeSlots();
     free = systemOutRule.getLog();
-  }/*
+  }
   @Test
   public void bookTest(){
     System.out.println("----UC04 - BOOKING TEST----");
