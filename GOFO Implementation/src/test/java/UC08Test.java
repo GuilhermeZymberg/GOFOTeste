@@ -50,7 +50,7 @@ public class UC08Test {
     Scanner input = new Scanner(System.in);
     System.out.println("UC08 - Case 1");
     pui = new PlayerUI();
-    systemIn.provideLines("4", "1", "pedro2@gmail.com", "12");
+    systemIn.provideLines("4", "1", "pedro2@gmail.com", "12","3");
     pui.playerMenu(input, 0, Aplayer, "Pedro", 45);
   }
 }
