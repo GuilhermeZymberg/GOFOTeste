@@ -82,30 +82,30 @@ public class PlayGroundScheduleTest {
     /* SET */
     @Test
     public void testSetCancel(){
-        playGround().setCancellationPeriod(3);
+        playGround.setCancellationPeriod(3);
         assertEquals(3, playGround.getCancellationPeriod());
     }
     @Test
     public void testSetPlace(){
         systemIn.provideLines("SP");
-        playGround().setLocation();
+        playGround.setLocation();
         assertEquals("SP", playGround.getLocation());
     }
     @Test
     public void testSetPrice(){
         systemIn.provideLines("40");
-        playGround().setLocation();
+        playGround.setLocation();
         assertEquals("SP", playGround.getLocation());
     }
     @Test
     public void testSetStatus(){
         systemIn.provideLines("not available");
-        playGround().setStatus();
+        playGround.setStatus();
         assertEquals("not available", playGround.getStatus());
     }
     @Test
     public void testSetSchedule(){
-        playGround().setSchedule(playGroundSchedule2);
+        playGround.setSchedule(playGroundSchedule2);
         assertEquals("not available", playGround.getStatus());
     }
     
