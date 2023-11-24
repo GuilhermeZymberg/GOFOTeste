@@ -37,9 +37,10 @@ jobs:
          mvn -Dtest=AdministratorTest test;
          mvn -Dtest=PlayerTest test;
          mvn -Dtest=eWalletTest test;
+         mvn test -Dtest=userProfileTest test;
          mvn -Dtest=PlayGroundScheduleTest test;
          EXIT_CODE=$?
-     #    mvn test -Dtest=userProfileTest test;
+         
      #    mvn test -Dtest=PlaygroundOwnerTest test;
      #    mvn test -Dtest=PlaygroundTest test;
       if: always()
