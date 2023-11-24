@@ -25,6 +25,10 @@ public class UC02ExceptionTest{
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
   @Rule
   public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+  @Before
+  public void setUp(){
+    s = new SystemUI();
+  }
   @Test
   public void addPlaygroundTest(){
     exit.expectSystemExitWithStatus(0);
