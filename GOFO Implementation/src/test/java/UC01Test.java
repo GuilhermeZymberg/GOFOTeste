@@ -6,6 +6,7 @@ import System.PlaygroundOwner;
 import System.eWallet;
 import java.io.*;
 import java.util.ArrayList;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.IOException;
@@ -28,6 +29,9 @@ public class UC01Test{
   
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+  @Rule
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+  
   @Before
   public void setUp(){
     e = new eWallet();
@@ -39,8 +43,7 @@ public class UC01Test{
   }
   @Test
   public void registerTest(){
-    System.out.println("----UC01 - REGISTRATION TEST----");
-    System.out.println("--Main Flow--");
+    exit.expectSystemExitWithStatus(0);
     systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","player","50","bolinha","3"); //option, fname, lname, ID, pass, email, phone, loc, balance, validation code, option
     s.accountMenu();
     /*systemIn.provideLines("50");
