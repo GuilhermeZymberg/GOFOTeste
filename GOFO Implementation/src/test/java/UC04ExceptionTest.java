@@ -20,7 +20,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertNotEquals;
 
-public class UC04_UC03Test{
+public class UC04ExceptionTest{
   private Administrator administrator;
   private Player p1;
   private Player p2;
