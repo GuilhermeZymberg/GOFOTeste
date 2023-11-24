@@ -162,4 +162,4 @@ public class UC03Test{
     assertEquals(free,systemOutRule.getLog());
     System.out.println("----END OF UC03 - CANCEL BOOKING TEST----");
   }*/
-}
+
