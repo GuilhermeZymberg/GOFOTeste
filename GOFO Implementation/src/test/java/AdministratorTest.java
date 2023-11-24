@@ -137,7 +137,8 @@ public class AdministratorTest{
   }
   @Test
   public void unSuspendPlaygroundTest(){
-    administrator.unSuspendPlayground("Bão");
+    systemIn.provideLines("yes");
+    administrator.unSuspendPlayground();
   }
   @Test
   public void deletePlaygroundTest(){
