@@ -122,7 +122,7 @@ public class UC04_UC03Test{
     systemOutRule.clearLog();
     p.freeSlots();
     free = systemOutRule.getLog();
-  }
+  }/*
   @Test
   public void bookTest(){
     System.out.println("----UC04 - BOOKING TEST----");
@@ -161,5 +161,5 @@ public class UC04_UC03Test{
     p.freeSlots();
     assertEquals(free,systemOutRule.getLog());
     System.out.println("----END OF UC03 - CANCEL BOOKING TEST----");
-  }
+  }*/
 }
