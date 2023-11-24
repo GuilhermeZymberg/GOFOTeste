@@ -1,11 +1,16 @@
 package codigo.src;
 import System.PlayGroundSchedule;
-import System.PlaygroundOwner;
-import System.Playground;
 import System.Administrator;
+import System.Playground;
 import System.Player;
-
+import UI.PlayerUI;
+import java.io.*;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import java.io.IOException;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -39,6 +44,7 @@ public class PlayGroundScheduleTest {
 
     @Test
     public void testGetCancel(){
+        System.out.println("=========================" + playGround.getCancellationPeriod() + "==============================");
         assertEquals("2", playGround.getCancellationPeriod());
     }
     @Test
