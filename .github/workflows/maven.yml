@@ -88,11 +88,16 @@ jobs:
         mvn -Dtest=UC05Test test 
       if: always()
 
-    - name: Teste UC05Exception
+    - name: Teste UC05Exception01
       run:
-        mvn -Dtest=UC05ExceptionTest test 
+        mvn -Dtest=UC05Exception01Test test 
       if: always()
-
+      
+    - name: Teste UC05Exception02
+      run:
+        mvn -Dtest=UC05Exception02Test test 
+      if: always()
+      
     - name: Teste UC06
       run:
         mvn -Dtest=UC06Test test 
