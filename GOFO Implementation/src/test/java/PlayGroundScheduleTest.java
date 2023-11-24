@@ -35,7 +35,7 @@ public class PlayGroundScheduleTest {
     @Before
     public void setUp() {
         playGroundSchedule = new PlayGroundSchedule("available", 2, 1, 3);
-        playGroundSchedule2 = new PlayGroundSchedule("not available", 2, 1, 3);
+        playGroundSchedule2 = new PlayGroundSchedule("not available", 2, 2, 4);
         playGroundOwner = new PlaygroundOwner();
         playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
         admin = new Administrator();
@@ -106,7 +106,8 @@ public class PlayGroundScheduleTest {
     @Test
     public void testSetSchedule(){
         playGround.setSchedule(playGroundSchedule2);
-        assertEquals("not available", playGround.getStatus());
+        assertEquals(2, playGround.getSlotsBegin());
+        assertEquals(4, playGround.getSlotsEnd());
     }
     
 
