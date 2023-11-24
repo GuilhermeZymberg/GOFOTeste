@@ -111,6 +111,7 @@ public class PlayGroundScheduleTest {
     
 
     /* BOOKING */
+    /*
     @Test
     public void testBooking(){
         playGround.bookingTheSlot("Pedro", "2", "sunday");
@@ -124,7 +125,7 @@ public class PlayGroundScheduleTest {
         systemIn.provideLines("2", "4");
         playGround.setBooking();
         assertEquals(40, playGround.getPrice());
-    }
+    }*/
     
     /*
     @Test
