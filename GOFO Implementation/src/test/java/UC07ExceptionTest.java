@@ -28,7 +28,7 @@ public class UC07ExceptionTest {
   private ArrayList<Player> Aplayer = new ArrayList<Player>();
   
   @Rule
-  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  public final ExpectedSystemExit exit = ExpectedSystemExit.none();
   @Rule
   public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
