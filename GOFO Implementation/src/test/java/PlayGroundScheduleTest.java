@@ -46,7 +46,7 @@ public class PlayGroundScheduleTest {
     @Test
     public void testGetCancel(){
         System.out.println("=========================" + playGround.getCancellationPeriod() + "==============================");
-        assertEquals("2", playGround.getCancellationPeriod());
+        assertEquals(2, playGround.getCancellationPeriod());
     }
     @Test
     public void testGetName(){
@@ -62,15 +62,15 @@ public class PlayGroundScheduleTest {
     }
     @Test
     public void testGetPrice(){
-        assertEquals("20", playGround.getPrice());
+        assertEquals(20, playGround.getPrice());
     }
     @Test
     public void testGetBegin(){
-        assertEquals("1", playGround.getSlotsBegin());
+        assertEquals(1, playGround.getSlotsBegin());
     }
     @Test
     public void testGetEnd(){
-        assertEquals("3", playGround.getSlotsEnd());
+        assertEquals(3, playGround.getSlotsEnd());
     }
     @Test
     public void testGetOwner(){
