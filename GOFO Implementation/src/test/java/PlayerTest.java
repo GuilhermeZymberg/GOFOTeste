@@ -83,7 +83,7 @@ public class PlayerTest{
   @Test
   public void createTeamTest(){
     System.out.println("----TESTE CREATE TEAM----");
-    p.createTeam("yoyoyo");
+    p.createTeam(p);
     System.out.println("----FIM----");
   }
   @Test
