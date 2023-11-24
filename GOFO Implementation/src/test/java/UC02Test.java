@@ -33,7 +33,7 @@ public class UC02Test{
   @Test
   public void addPlaygroundTest(){
     exit.expectSystemExitWithStatus(0);
-    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","1","ceto barrero","gg","4","available","4","3","10","8");
+    systemIn.provideLines("2","gui","z", "7","1234", "gui@gm.com","11", "sp","playground owner","50","bolinha","1","gui@gm.com","1234","1","ceto barrero","gg","4","available","4","3","10","8","3");
     s.accountMenu();
   }
 }/*
