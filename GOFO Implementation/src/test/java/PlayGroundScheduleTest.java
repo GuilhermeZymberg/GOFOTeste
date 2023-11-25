@@ -160,7 +160,7 @@ public class PlayGroundScheduleTest {
         playGroundOwner.getListofPlayground();
         playGroundOwner.addPlayground(playGround2);
         playGroundOwner.getListofPlayground();
-        systemIn.provideLines("1", "Play_do_ze");
+        systemIn.provideLines("1", "PlaygroundZe");
         playGroundOwner.updatePlaygroundName("Playground1");
     }
     
