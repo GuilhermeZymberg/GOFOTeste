@@ -163,26 +163,30 @@ public class PlayGroundScheduleTest {
         systemIn.provideLines("1", "PlaygroundZe");
         playGroundOwner.updatePlaygroundName("Playground1");
     }
-    
- /*
+
+    /* PLAYGROUND SCHEDULE */
+ 
     @Test
-    //teste para verificar a impressao com saldo suficiente
     public void testIndex() {
         assertEquals(2, playGroundSchedule.getDayIndex("monday"));
     }
-
     @Test
     public void TestSetPrice(){
         assertEquals(45, playGroundSchedule.getTimeSlotPerHour());
     }
-
     @Test
     public void Testbegin(){
         assertEquals(1, playGroundSchedule.getBegin());
     }
-
     @Test
     public void TestEnd(){
         assertEquals(3, playGroundSchedule.getEnd());
-    }*/
+    }
+    @Test
+    public void test(){
+        playGroundSchedule.displayAllSlots();
+        playGroundSchedule.displayFreeSlots();
+        systemIn.provideLines("4", "5");
+        playGroundSchedule.setschedule();
+    }
 }
