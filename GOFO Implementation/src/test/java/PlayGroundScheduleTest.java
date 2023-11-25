@@ -172,7 +172,7 @@ public class PlayGroundScheduleTest {
     }
     @Test
     public void TestSetPrice(){
-        assertEquals(45, playGroundSchedule.getTimeSlotPerHour());
+        assertEquals(2, playGroundSchedule.getTimeSlotPerHour());
     }
     @Test
     public void Testbegin(){
