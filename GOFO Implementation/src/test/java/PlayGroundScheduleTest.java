@@ -29,6 +29,7 @@ public class PlayGroundScheduleTest {
     private PlayGroundSchedule playGroundSchedule2;
     private PlaygroundOwner playGroundOwner;
     private Playground playGround;
+    private Playground2 playGround;
     private Administrator admin;
     private Player player;
 
@@ -38,6 +39,7 @@ public class PlayGroundScheduleTest {
         playGroundSchedule2 = new PlayGroundSchedule("not available", 2, 2, 4);
         playGroundOwner = new PlaygroundOwner();
         playGround = new Playground("Playground1", "Pedro", "SBC", 2, 20, "available", playGroundSchedule);
+        playGround2 = new Playground("Playground2", "Pedro", "SP", 2, 20, "available", playGroundSchedule);
         admin = new Administrator();
         player = new Player();
         playGroundOwner.addPlayground(playGround);        
@@ -137,18 +139,32 @@ public class PlayGroundScheduleTest {
         playGround.setBooking();
         assertEquals(40, playGround.getPrice());
     }*/
+
+    /* PLAYGROUD OWNER*/
     
-    /*
     @Test
     public void testPlayExist(){
         assertEquals(true, playGroundOwner.existPlayground("Playground1"));
     }
-    
     @Test
     public void testPlayNotExist(){
         assertEquals(false, playGroundOwner.existPlayground("Playground14"));
     }
- 
+    @Test
+    public void testReciveMsg(){
+        playGroundOwner.addRecieveMsg("Oi");
+        playGroundOwner.displayRecieveMsg();
+    }
+    @Test
+    public void testAddPlayground(){
+        playGroundOwner.getListofPlayground();
+        playGroundOwner.addPlayground(playGround2);
+        playGroundOwner.getListofPlayground();
+        systemIn.provideLines("1", "Play do ze");
+        playGroundOwner.updatePlaygroundName(Playground1);
+    }
+    
+ /*
     @Test
     //teste para verificar a impressao com saldo suficiente
     public void testIndex() {
