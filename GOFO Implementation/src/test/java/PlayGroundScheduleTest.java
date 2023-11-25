@@ -29,7 +29,7 @@ public class PlayGroundScheduleTest {
     private PlayGroundSchedule playGroundSchedule2;
     private PlaygroundOwner playGroundOwner;
     private Playground playGround;
-    private Playground2 playGround;
+    private Playground playGround2;
     private Administrator admin;
     private Player player;
 
@@ -161,7 +161,7 @@ public class PlayGroundScheduleTest {
         playGroundOwner.addPlayground(playGround2);
         playGroundOwner.getListofPlayground();
         systemIn.provideLines("1", "Play do ze");
-        playGroundOwner.updatePlaygroundName(Playground1);
+        playGroundOwner.updatePlaygroundName("Playground1");
     }
     
  /*
