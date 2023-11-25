@@ -27,6 +27,7 @@ public class PlayGroundScheduleTest {
 
     private PlayGroundSchedule playGroundSchedule;
     private PlayGroundSchedule playGroundSchedule2;
+    private PlayGroundSchedule playGroundSchedule3;
     private PlaygroundOwner playGroundOwner;
     private Playground playGround;
     private Playground playGround2;
@@ -184,9 +185,10 @@ public class PlayGroundScheduleTest {
     }
     @Test
     public void test(){
+        playGroundSchedule3 = new PlayGroundSchedule();
         systemIn.provideLines("4", "5");
-        playGroundSchedule.setschedule();
-        playGroundSchedule.displayFreeSlots();
-        playGroundSchedule.displayAllSlots();
+        playGroundSchedule3.setschedule();
+        playGroundSchedule3.displayFreeSlots();
+        playGroundSchedule3.displayAllSlots();
     }
 }
