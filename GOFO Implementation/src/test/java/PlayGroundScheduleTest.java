@@ -184,8 +184,9 @@ public class PlayGroundScheduleTest {
     }
     @Test
     public void test(){
-        playGroundSchedule.displayFreeSlots();
         systemIn.provideLines("4", "5");
         playGroundSchedule.setschedule();
+        playGroundSchedule.displayFreeSlots();
+        playGroundSchedule.displayAllSlots();
     }
 }
